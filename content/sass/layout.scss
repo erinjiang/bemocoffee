@@ -1,0 +1,166 @@
+@import "_main";
+@import "_extend";
+@import "_grid";
+
+html,body {
+	background-color:$u-color-white;
+	color:$u-color-black;
+	font-size:$-u-font-size-general;
+	font-family:微軟正黑體, "Microsoft JhengHei", Arial, Helvetica, sans-serif;
+	line-height:1.5;
+	letter-spacing:1px;
+}
+
+img {
+	width:100%;
+}
+
+div {
+	@extend %-u-boxsizing;
+}
+
+span {
+	@extend %-u-boxsizing;
+}
+
+ul {
+	margin:0;
+	padding:0;
+	li {
+		margin:0;
+		padding:0;
+	}
+}
+
+#wallper {
+	width:100%;
+	.site {
+		&-header {
+			width:100%;
+			border-bottom:$-u-border-black;
+			.site-content {
+				padding-top:10px;
+				padding-bottom:10px;
+			}
+			a.o-logo {
+				display:block;
+				margin:0 auto;
+			}
+		}
+		&-footer {
+			width:100%;
+			color:$u-color-black;
+			text-align:center;
+			.site-content {
+				padding-top:10px;
+				padding-bottom:10px;
+			}
+		}
+		&-main {
+			.site-content {
+				min-height:448px;
+			}
+		}
+		&-content {
+			margin:0 auto;
+		}
+	}
+	.l-wrap {
+		margin:0 auto;
+	}
+}
+
+/*-------------------------------------------------------------- mobile --------------------------------------------------------------*/
+@media screen and (max-width:599px) {
+	#wallper {
+		.site {
+			&-header {
+				a.o-logo {
+					width:92px;
+					height:40px;
+				}
+			}
+			&-main {
+				.site-content {
+					padding-top:30px;
+					padding-bottom:30px;
+					.l-wrap { 
+						margin-bottom:30px;
+						&:last-child {
+							margin-bottom:0;
+						}
+					}
+				}
+			}
+		}
+		.l-wrap {
+			width:100%;
+			padding-right:14px;
+			padding-left:14px;
+		}
+	}
+}
+
+
+/*-------------------------------------------------------------- tablet --------------------------------------------------------------*/
+@media screen and (min-width:600px) and (max-width:1023px) {
+	#wallper {
+		.site {
+			&-header {
+				a.o-logo {
+					width:92px;
+					height:40px;
+				}
+			}
+			&-main {
+				.site-content {
+					padding-top:50px;
+					padding-bottom:50px;
+					.l-wrap { 
+						margin-bottom:50px;
+						&:last-child {
+							margin-bottom:0;
+						}
+					}
+				}
+			}
+		}
+		.l-wrap {
+			max-width:960px;
+			padding-right:10px;
+			padding-left:10px;
+		}
+	}
+}
+
+
+/*-------------------------------------------------------------- pc --------------------------------------------------------------*/
+@media screen and (min-width:1024px) {
+	#wallper {
+		.site {
+			&-header {
+				a.o-logo {
+					width:138px;
+					height:60px;
+				}
+			}
+			&-main {
+				.site-content {
+					padding-top:50px;
+					padding-bottom:50px;
+					.l-wrap { 
+						margin-bottom:50px;
+						&:last-child {
+							margin-bottom:0;
+						}
+					}
+				}
+			}
+		}
+		.l-wrap {
+			max-width:1200px;
+			padding-right:10px;
+			padding-left:10px;
+		}
+	}
+}

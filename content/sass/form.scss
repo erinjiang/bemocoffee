@@ -1,0 +1,143 @@
+@import "_main";
+@import "_extend";
+
+
+/*------------------------- 表單 -------------------------*/
+.l-form {
+	display:block;
+	background:$u-color-white;
+	border:$-u-border-black;
+	@extend %-u-border-radius-s;
+	&__row {
+		// 第一列
+		&:first-child {
+			// 表單的下拉TOP加圓角
+			.o-select__form {
+				li {
+					@extend %-u-border-radius-top-s;
+					ul {
+						li {
+							@extend %-u-border-radius-clear-all;
+						}
+					}
+				}
+			}
+		}
+		// 最後一列
+		&:last-child {
+			border:none;
+			//表單的 input
+			input[type=text], [type=password], [type=email], [type=tel] {
+				border:none;
+			}
+			.o-option__btn {
+				border:none;
+			}
+			.o-select__form { 
+				li {
+					@extend %-u-border-radius-bottom-s;
+					border:none;
+					ul {
+						li {
+							@extend %-u-border-radius-clear-all;
+						}
+					}
+				}
+			}
+			// 最後一列的，最後一格的表單資料，取消border
+			.l-form__content {
+				&--info {
+					border:none;
+				}
+			}
+		}
+	}
+	// 表格
+	&__content {
+		border-right:$-u-border-mediumgrey;
+		// 最後一格
+		&:last-child {
+			border-right:none;
+		}
+		.o-radio, .o-checkbox {
+			padding-right:14px;
+			padding-left:14px;
+			border-bottom:$-u-border-mediumgrey;
+			&:last-child {
+				border:none;
+			}
+		}
+		// 表單資料
+		&--info {
+			padding-top:10px;
+			padding-bottom:10px;
+			padding-right:14px;
+			padding-left:14px;
+			overflow:hidden;
+			font-weight:bold;
+			border-right:$-u-border-mediumgrey;
+			border-bottom:$-u-border-mediumgrey;
+			span {
+				@extend %-u-boxsizing;
+				display:block;
+				float:left;
+				&.info_title {
+					width:70px;
+				}
+				&.info_detail {
+					width:calc(100% - 70px);
+					padding-left:10px;
+				}
+			}
+			&:last-child {
+				border-right:none;
+			}
+		}
+	}
+	// 表單的下拉按下後
+	&.active {
+		//下拉TOP加圓角
+		@extend %-u-border-radius-top-s;
+	}
+}
+
+
+/*-------------------------------------------------------------- mobile --------------------------------------------------------------*/
+@media screen and (max-width:599px) {
+	/*-- 輸入表單 --*/
+	.l-form {
+		margin-bottom:30px;
+		&__content {
+			&:nth-child(2) {
+				border-right:none;
+			}
+			&:last-child {
+				border-right:none;
+			}
+			&.col-xl {
+				border-right:none;
+			}
+			&.col-xxl {
+				border-right:none;
+			}
+		}
+	}
+}
+
+
+/*-------------------------------------------------------------- tablet --------------------------------------------------------------*/
+@media screen and (min-width:600px) and (max-width:1023px) {
+	/*-- 輸入表單 --*/
+	.l-form {
+		margin-bottom:50px;
+	}
+}
+
+
+/*-------------------------------------------------------------- pc --------------------------------------------------------------*/
+@media screen and (min-width:1024px) {
+	/*-- 輸入表單 --*/
+	.l-form {
+		margin-bottom:50px;
+	}
+}

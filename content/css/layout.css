@@ -1,0 +1,358 @@
+@charset "UTF-8";
+/*-- color --*/
+/*-- font size --*/
+/*-- font line height --*/
+/*-- Grids --*/
+/*-- border --*/
+/*-- box-sizing --*/
+/* line 3, ../sass/_extend.scss */
+.grid, div, span {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*-- Clear--*/
+/*-- border-radius--*/
+/*-- display-inline --*/
+/*-- 元件 Y軸 位移 --*/
+/*-- 陰影 --*/
+/*- for docking bottom-*/
+/*-- color --*/
+/*-- font size --*/
+/*-- font line height --*/
+/*-- Grids --*/
+/*-- border --*/
+/* line 7, ../sass/_grid.scss */
+.grid {
+  width: 100%;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -moz-align-content: flex-start;
+  -ms-align-content: flex-start;
+  -o-align-content: flex-start;
+  align-content: flex-start;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  vertical-align: top;
+}
+/* line 38, ../sass/_grid.scss */
+.grid .col {
+  background: #F8F8F8;
+  min-height: 30px;
+}
+/* line 41, ../sass/_grid.scss */
+.grid .col:nth-child(even) {
+  background: #EEEEEE;
+}
+/* line 44, ../sass/_grid.scss */
+.grid .col:first-child {
+  margin-left: 0;
+}
+/* line 47, ../sass/_grid.scss */
+.grid .col:last-child {
+  margin-right: 0;
+}
+/* line 50, ../sass/_grid.scss */
+.grid .col-xs {
+  width: -webkit-calc((100% / 12)*2);
+  width: -moz-calc((100% / 12)*2);
+  width: -ms-calc((100% / 12)*2);
+  width: -o-calc((100% / 12)*2);
+  width: calc((100% / 12)*2);
+}
+/* line 57, ../sass/_grid.scss */
+.grid .col-md {
+  width: -webkit-calc((100% / 12)*3);
+  width: -moz-calc((100% / 12)*3);
+  width: -ms-calc((100% / 12)*3);
+  width: -o-calc((100% / 12)*3);
+  width: calc((100% / 12)*3);
+}
+/* line 64, ../sass/_grid.scss */
+.grid .col-lg {
+  width: -webkit-calc((100% / 12)*6);
+  width: -moz-calc((100% / 12)*6);
+  width: -ms-calc((100% / 12)*6);
+  width: -o-calc((100% / 12)*6);
+  width: calc((100% / 12)*6);
+}
+/* line 71, ../sass/_grid.scss */
+.grid .col-xl {
+  width: -webkit-calc((100% / 12)*6);
+  width: -moz-calc((100% / 12)*6);
+  width: -ms-calc((100% / 12)*6);
+  width: -o-calc((100% / 12)*6);
+  width: calc((100% / 12)*6);
+}
+/* line 78, ../sass/_grid.scss */
+.grid .col-xxl {
+  width: 100%;
+}
+/* line 82, ../sass/_grid.scss */
+.grid .col-WGT {
+  background: #CCCCCC;
+  min-height: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+/* line 87, ../sass/_grid.scss */
+.grid .col-WGT:nth-child(even) {
+  background: #999999;
+}
+/* line 90, ../sass/_grid.scss */
+.grid .col-WGT:first-child {
+  margin-left: 0;
+}
+/* line 93, ../sass/_grid.scss */
+.grid .col-WGT:last-child {
+  margin-right: 0;
+}
+/* line 96, ../sass/_grid.scss */
+.grid .col-WGT-xs-WGT {
+  width: -webkit-calc(((100% / 12)*2) - 20px);
+  width: -moz-calc(((100% / 12)*2) - 20px);
+  width: -ms-calc(((100% / 12)*2) - 20px);
+  width: -o-calc(((100% / 12)*2) - 20px);
+  width: calc(((100% / 12)*2) - 20px);
+}
+/* line 103, ../sass/_grid.scss */
+.grid .col-WGT-md-WGT {
+  width: -webkit-calc(((100% / 12)*3) - 20px);
+  width: -moz-calc(((100% / 12)*3) - 20px);
+  width: -ms-calc(((100% / 12)*3) - 20px);
+  width: -o-calc(((100% / 12)*3) - 20px);
+  width: calc(((100% / 12)*3) - 20px);
+}
+/* line 110, ../sass/_grid.scss */
+.grid .col-WGT-lg-WGT {
+  width: -webkit-calc(((100% / 12)*6) - 20px);
+  width: -moz-calc(((100% / 12)*6) - 20px);
+  width: -ms-calc(((100% / 12)*6) - 20px);
+  width: -o-calc(((100% / 12)*6) - 20px);
+  width: calc(((100% / 12)*6) - 20px);
+}
+/* line 117, ../sass/_grid.scss */
+.grid .col-WGT-xl-WGT {
+  width: -webkit-calc(100% - 20px);
+  width: -moz-calc(100% - 20px);
+  width: -ms-calc(100% - 20px);
+  width: -o-calc(100% - 20px);
+  width: calc(100% - 20px);
+}
+
+/*-------------------------------------------------------------- mobile --------------------------------------------------------------*/
+@media screen and (max-width: 599px) {
+  /* line 130, ../sass/_grid.scss */
+  .grid .col-xs {
+    width: -webkit-calc(100% / 2);
+    width: -moz-calc(100% / 2);
+    width: -ms-calc(100% / 2);
+    width: -o-calc(100% / 2);
+    width: calc(100% / 2);
+  }
+  /* line 137, ../sass/_grid.scss */
+  .grid .col-md {
+    width: -webkit-calc(100% / 2);
+    width: -moz-calc(100% / 2);
+    width: -ms-calc(100% / 2);
+    width: -o-calc(100% / 2);
+    width: calc(100% / 2);
+  }
+  /* line 144, ../sass/_grid.scss */
+  .grid .col-lg {
+    width: -webkit-calc(100% / 2);
+    width: -moz-calc(100% / 2);
+    width: -ms-calc(100% / 2);
+    width: -o-calc(100% / 2);
+    width: calc(100% / 2);
+  }
+  /* line 151, ../sass/_grid.scss */
+  .grid .col-xl {
+    width: 100%;
+  }
+  /* line 154, ../sass/_grid.scss */
+  .grid .col-xxl {
+    width: 100%;
+  }
+}
+/*-------------------------------------------------------------- tablet --------------------------------------------------------------*/
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  /* line 164, ../sass/_grid.scss */
+  .grid .col {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+/*-------------------------------------------------------------- pc --------------------------------------------------------------*/
+/* line 5, ../sass/layout.scss */
+html, body {
+  background-color: #FFFFFF;
+  color: #2A2A2A;
+  font-size: 16px;
+  font-family: 微軟正黑體, "Microsoft JhengHei", Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+/* line 14, ../sass/layout.scss */
+img {
+  width: 100%;
+}
+
+/* line 26, ../sass/layout.scss */
+ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 29, ../sass/layout.scss */
+ul li {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 35, ../sass/layout.scss */
+#wallper {
+  width: 100%;
+}
+/* line 38, ../sass/layout.scss */
+#wallper .site-header {
+  width: 100%;
+  border-bottom: #2A2A2A 1px solid;
+}
+/* line 41, ../sass/layout.scss */
+#wallper .site-header .site-content {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 45, ../sass/layout.scss */
+#wallper .site-header a.o-logo {
+  display: block;
+  margin: 0 auto;
+}
+/* line 50, ../sass/layout.scss */
+#wallper .site-footer {
+  width: 100%;
+  color: #2A2A2A;
+  text-align: center;
+}
+/* line 54, ../sass/layout.scss */
+#wallper .site-footer .site-content {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 60, ../sass/layout.scss */
+#wallper .site-main .site-content {
+  min-height: 448px;
+}
+/* line 64, ../sass/layout.scss */
+#wallper .site-content {
+  margin: 0 auto;
+}
+/* line 68, ../sass/layout.scss */
+#wallper .l-wrap {
+  margin: 0 auto;
+}
+
+/*-------------------------------------------------------------- mobile --------------------------------------------------------------*/
+@media screen and (max-width: 599px) {
+  /* line 78, ../sass/layout.scss */
+  #wallper .site-header a.o-logo {
+    width: 92px;
+    height: 40px;
+  }
+  /* line 84, ../sass/layout.scss */
+  #wallper .site-main .site-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  /* line 87, ../sass/layout.scss */
+  #wallper .site-main .site-content .l-wrap {
+    margin-bottom: 30px;
+  }
+  /* line 89, ../sass/layout.scss */
+  #wallper .site-main .site-content .l-wrap:last-child {
+    margin-bottom: 0;
+  }
+  /* line 96, ../sass/layout.scss */
+  #wallper .l-wrap {
+    width: 100%;
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+}
+/*-------------------------------------------------------------- tablet --------------------------------------------------------------*/
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  /* line 110, ../sass/layout.scss */
+  #wallper .site-header a.o-logo {
+    width: 92px;
+    height: 40px;
+  }
+  /* line 116, ../sass/layout.scss */
+  #wallper .site-main .site-content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  /* line 119, ../sass/layout.scss */
+  #wallper .site-main .site-content .l-wrap {
+    margin-bottom: 50px;
+  }
+  /* line 121, ../sass/layout.scss */
+  #wallper .site-main .site-content .l-wrap:last-child {
+    margin-bottom: 0;
+  }
+  /* line 128, ../sass/layout.scss */
+  #wallper .l-wrap {
+    max-width: 960px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+/*-------------------------------------------------------------- pc --------------------------------------------------------------*/
+@media screen and (min-width: 1024px) {
+  /* line 142, ../sass/layout.scss */
+  #wallper .site-header a.o-logo {
+    width: 138px;
+    height: 60px;
+  }
+  /* line 148, ../sass/layout.scss */
+  #wallper .site-main .site-content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  /* line 151, ../sass/layout.scss */
+  #wallper .site-main .site-content .l-wrap {
+    margin-bottom: 50px;
+  }
+  /* line 153, ../sass/layout.scss */
+  #wallper .site-main .site-content .l-wrap:last-child {
+    margin-bottom: 0;
+  }
+  /* line 160, ../sass/layout.scss */
+  #wallper .l-wrap {
+    max-width: 1200px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}

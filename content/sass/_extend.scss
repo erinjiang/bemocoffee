@@ -1,0 +1,104 @@
+
+/*-- box-sizing --*/
+%-u-boxsizing {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+/*-- Clear--*/
+%-u-clearfix {
+	content:" ";
+	clear:both;
+	float:none;
+}
+
+/*-- border-radius--*/
+%-u-border-radius-clear-all {
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	-o-border-radius:0px;
+	border-radius:0px;
+}
+
+%-u-border-radius-xs {
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px;
+}
+
+%-u-border-radius-top-xs {
+	-webkit-border-radius:3px 3px 0 0;
+	-moz-border-radius:3px 3px 0 0;
+	-o-border-radius:3px 3px 0 0;
+	border-radius:3px 3px 0 0;
+}
+
+%-u-border-radius-bottom-xs {
+	-webkit-border-radius:0 0 3px 3px;
+	-moz-border-radius:0 0 3px 3px;
+	-o-border-radius:0 0 3px 3px;
+	border-radius:0 0 3px 3px;
+}
+
+%-u-border-radius-s {
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+}
+
+%-u-border-radius-top-s {
+	-webkit-border-radius:5px 5px 0 0;
+	-moz-border-radius:5px 5px 0 0;
+	-o-border-radius:5px 5px 0 0;
+	border-radius:5px 5px 0 0;
+}
+
+%-u-border-radius-bottom-s {
+	-webkit-border-radius:0 0 5px 5px;
+	-moz-border-radius:0 0 5px 5px;
+	-o-border-radius:0 0 5px 5px;
+	border-radius:0 0 5px 5px;
+}
+
+/*-- display-inline --*/
+%u-display-inBlock {
+	display:-moz-inline-block;
+	display:-mz-inline-block;
+	display:-o-inline-block;
+	display:inline-block;
+	*display:inline;
+	vertical-align:middle;
+}
+
+%u-display-inBlock-T {
+	display:-moz-inline-block;
+	display:-mz-inline-block;
+	display:-o-inline-block;
+	display:inline-block;
+	*display:inline;
+	vertical-align:top;
+}
+
+/*-- 元件 Y軸 位移 --*/
+%u-transform-TLY-50 {
+	-webkit-transform:translateY(-50%);
+	-moz-transform:translateY(-50%);
+	-ms-transform:translateY(-50%);
+	-o-transform:translateY(-50%);
+	transform:translateY(-50%);
+}
+
+/*-- 陰影 --*/
+/*- for docking bottom-*/
+%u-boxshadow-DCK-BTM {
+	-webkit-box-shadow:0px -1px 5px rgba(0,0,0,0.3);
+	-moz-box-shadow:0px -1px 5px rgba(0,0,0,0.3);
+	-ms-box-shadow:0px -1px 5px rgba(0,0,0,0.3);
+	-o-box-shadow:0px -1px 5px rgba(0,0,0,0.3);
+	box-shadow:0px -1px 5px rgba(0,0,0,0.3);
+}

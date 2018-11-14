@@ -1,0 +1,510 @@
+@import "_main";
+@import "_extend";
+
+
+/*------------------------- 字級 -------------------------*/
+.t1 {
+	font-size:$-u-font-size-xxl;
+	font-weight:bold;
+}
+
+.t2 {
+	font-size:$-u-font-size-xl;
+	font-weight:bold;
+}
+
+.t3 {
+	font-size:$-u-font-size-l;
+	font-weight:bold;
+}
+
+.t4 {
+	font-size:$-u-font-size-m;
+	font-weight:bold;
+}
+
+.t5 {
+	font-size:$-u-font-size-s;
+	font-weight:bold;
+}
+
+.t6 {
+	font-size:$-u-font-size-general;
+	font-weight:bold;
+}
+
+p {
+	font-size:$-u-font-size-general;
+}
+
+.smallFont {
+	color:$u-color-grey;
+	font-size:$-u-font-size-xs;
+}
+
+/*-- 標題 --*/
+.t {
+	/*-- 段落大標 --*/
+	&-section {
+		text-align:center;
+		margin-bottom:20px;
+	}
+}
+
+/*------------------------- 選項 -------------------------*/
+
+.o-radio, .o-checkbox {
+	position:relative;
+	padding:15px 0;
+	&__input {
+		position:absolute;
+		opacity:0;
+	}
+	&__tex {
+		position:relative;
+		display:block;
+		padding:3px 0 3px 40px;
+		@extend %-u-boxsizing;
+		cursor:pointer;
+		&:before {
+			background-color:$u-color-white;
+			position:absolute;
+			content:" ";
+			top:50%;
+			left:0;
+			width:30px;
+			height:30px;
+			margin-right:10px;
+			border:$-u-border-grey;
+			@extend %u-transform-TLY-50;
+			@extend %-u-boxsizing;
+		}
+	}
+	&__input:checked + &__tex:before {
+		background-color:$u-color-black;
+		background-image:url(../images/icon/check.png);
+		background-size:30px;
+		background-position:0 0;
+		background-repeat:no-repeat;
+		border:$-u-border-black;
+	}
+}
+
+/*-- 單選 --*/
+.o-radio {
+	&__tex {
+		&:before {
+			-webkit-border-radius:30px;
+			-moz-border-radius:30px;
+			-o-border-radius:30px;
+			border-radius:30px;
+		}
+	}
+}
+
+/*-- 複選 --*/
+.o-checkbox {
+	&__tex {
+		&:before {
+			@extend %-u-border-radius-xs;
+		}
+	}
+}
+
+/*-- 另開選項按鈕 --*/
+.o-option__btn {
+	position:relative;
+	width:100%;
+	color:$u-color-grey;
+	padding:13px 40px 13px 14px;
+	@extend %-u-boxsizing;
+	border-bottom:$-u-border-mediumgrey;
+	cursor:pointer;
+	&:after {
+		content:" ";
+		display:block;
+		width:16px;
+		height:16px;
+		position:absolute;
+		top:17px;
+		right:14px;
+		background-image: url(../images/icon/arrow/black/right.png);
+		background-position: right center;
+		background-repeat: no-repeat;
+		background-size: 16px;
+	}
+	&.active {
+		color:$u-color-black;
+	}
+}
+
+/*------------------------- 輸入框 -------------------------*/
+
+input[type=text], [type=password], [type=email], [type=tel] {
+	background:transparent;
+	color:$u-color-black;
+	font-size:$-u-font-size-general;
+	line-height:$lineHeight;
+	width:100%;
+	height:50px;
+	border:none;
+	margin:0;
+	padding:13px 14px;
+	@extend %-u-boxsizing;
+	@extend %-u-border-radius-clear-all;
+	border-bottom:$-u-border-mediumgrey;
+}
+
+input:focus {
+	outline:none;
+}
+
+/*-- 提示文字 --*/
+::-webkit-input-placeholder {
+	color:$u-color-grey;
+}
+::-moz-placeholder {
+	color:$u-color-grey;
+}
+:-moz-placeholder {
+	color:$u-color-grey;
+}
+:-ms-input-placeholder {
+	color:$u-color-grey;
+}
+
+
+/*------------------------- 下拉選單 -------------------------*/
+
+/*-- 表單下拉 --*/
+.o-select__form {
+	select {
+		background:transparent;
+		color:$u-color-black;
+		font-size:$-u-font-size-general;
+		line-height:$lineHeight;
+		height:50px;
+		border:none;
+		margin:0;
+		padding:13px 40px 13px 14px;
+		@extend %-u-boxsizing;
+	}
+	.transformSelect {
+		position:relative;
+		li {
+			height:50px;
+			list-style:none;
+			position:relative;
+			@extend %-u-boxsizing;
+			border-bottom:$-u-border-mediumgrey;
+			span {
+				line-height:$lineHeight;
+				display:block;
+				height:50px;
+				color:$u-color-grey;
+				padding:13px 40px 13px 14px;
+				cursor:pointer;
+				&:after {
+					content:" ";
+					display:block;
+					width:16px;
+					height:16px;
+					position:absolute;
+					top:17px;
+					right:14px;
+					background-image: url(../images/icon/arrow/black/down.png);
+					background-position: right center;
+	  				background-repeat: no-repeat;
+					background-size: 16px;
+				}
+			}
+			input[type=text] {
+			}
+			ul {
+				position:absolute;
+				margin-top:-1px;
+				left:-1px;
+				width:100%;
+				border-right:$-u-border-black;
+				border-bottom:$-u-border-black;
+				border-left:$-u-border-black;
+				li {
+					border:none;
+					span {
+						background:$u-color-white;
+						padding:13px 14px;
+						color:$u-color-black;
+						&:after {
+							display:none;
+						}
+						&:hover {
+							background:$u-color-black;
+							color:$u-color-white;
+						}
+					}
+				}
+			}
+			&.open {
+				ul {
+					border-top:$-u-border-black;
+					li {
+						span {
+							border:none;
+						}
+					}
+				}
+			}
+		}
+		.changeColor {
+			span {
+				color:$u-color-black;
+			}
+			ul {
+				li {
+					span {
+						&:hover {
+							color:$u-color-white;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*------------------------- 按鈕 -------------------------*/
+
+button {
+	font-size:$-u-font-size-general;
+	font-weight:bold;
+	line-height:$lineHeight;
+	margin:0;
+	border:none;
+	cursor:pointer;
+	@extend %-u-boxsizing;
+	@extend %-u-border-radius-s;
+}
+
+button:focus {
+	outline:none;
+}
+
+// 按鈕組件
+.c-button {
+	margin-bottom:10px;
+	text-align:center;
+	// 大尺寸按鈕
+	&__large {
+		padding:18px 20px;
+	}
+	// 主要按鈕
+	&__main {
+		background:$u-color-black;
+		color:$u-color-white;
+	}
+	// 次要按鈕
+	&__sec {
+		background:$u-color-asgGrey;
+		color:$u-color-drkGrey;
+	}
+	// 一欄式按鈕
+	&__column--one {
+	}
+	// 兩欄式按鈕
+	&__column--two {
+		display:-webkit-inline-flex;
+		display:-moz-inline-flex;
+		display:-ms-inline-flex;
+		display:-o-inline-flex;
+		display:inline-flex;
+		-webkit-justify-content:center;
+		-moz-justify-content:center;
+		-ms-justify-content:center;
+		-o-justify-content:center;
+		justify-content:center;
+		-webkit-align-content:flex-start;
+		-moz-align-content:flex-start;
+		-ms-align-content:flex-start;
+		-o-align-content:flex-start;
+		align-content:flex-start;
+	}
+}
+
+.o-docking {
+	position:fixed;
+	left:0;
+	bottom:0;
+	width:100%;
+	// 置底
+	&__bottom {
+		background:$u-color-white;
+		width:100%;
+		padding-top:10px;
+		@extend %u-boxshadow-DCK-BTM;
+		overflow:hidden;
+	}
+	// 金額欄位
+	.c-sum {
+		margin-bottom:10px;
+		padding-bottom:10px;
+		border-bottom:$-u-border-mediumgrey;
+	}
+	// docking 時候的 button
+	.c-button {
+		&__column--two {
+			.c-button__large {
+				flex:1 1 auto;
+			}
+		}
+	}
+}
+
+/*-- 金額欄位，可以用在 payment，以及 oder deatil --*/
+.c-sum {
+	width:100%;
+	display:-webkit-inline-flex;
+	display:-moz-inline-flex;
+	display:-ms-inline-flex;
+	display:-o-inline-flex;
+	display:inline-flex;
+	-webkit-justify-content:center;
+	-moz-justify-content:center;
+	-ms-justify-content:center;
+	-o-justify-content:center;
+	justify-content:center;
+	-webkit-align-content:flex-start;
+	-moz-align-content:flex-start;
+	-ms-align-content:flex-start;
+	-o-align-content:flex-start;
+	align-content:flex-start;
+	font-weight:bold;
+	&__title {
+		flex:1 1 auto;
+	}
+	&__count {
+		flex:1 1 auto;
+		text-align:right;
+	}
+	&__total {
+		flex:1 1 auto;
+		text-align:right;
+		color:$u-color-brown;
+	}
+}
+
+
+/*-------------------------------------------------------------- mobile --------------------------------------------------------------*/
+@media screen and (max-width:599px) {
+	/*------------------------- 按鈕 -------------------------*/
+	.c-button {
+		&__column--one {
+			width:100%;
+			.c-button__large {
+				width:100%;
+			}
+		}
+		&__column--two {
+			width:100%;
+			.c-button__large {
+				flex:1 1 auto;
+				&:first-child {
+					margin-right:7px;
+				}
+				&:last-child {
+					margin-left:7px;
+				}
+			}
+		}
+	}
+	.o-docking {
+		&__bottom {
+			padding-top:10px;
+			.l-wrap {
+				width:100%;
+			}
+		}
+	}
+}
+
+
+/*-------------------------------------------------------------- tablet --------------------------------------------------------------*/
+@media screen and (min-width:600px) and (max-width:1023px) {
+	/*------------------------- 按鈕 -------------------------*/
+	.c-button {
+		&__column--one {
+			width:100%;
+			.c-button__large {
+				width:220px;
+			}
+		}
+		&__column--two {
+			width:100%;
+			.c-button__large {
+				width:220px;
+				&:first-child {
+					margin-right:10px;
+				}
+				&:last-child {
+					margin-left:10px;
+				}
+			}
+		}
+	}
+	.o-docking {
+		&__bottom {
+			padding-top:20px;
+			.l-wrap {
+				width:100%;
+			}
+		}
+	}
+}
+
+
+/*-------------------------------------------------------------- pc --------------------------------------------------------------*/
+@media screen and (min-width:1024px) {
+	/*------------------------- 按鈕 -------------------------*/	
+	.c-button {
+		&__column--one {
+			width:100%;
+			.c-button__large {
+				width:220px;
+			}
+		}
+		&__column--two {
+			width:100%;
+			.c-button__large {
+				width:220px;
+				&:first-child {
+					margin-right:10px;
+				}
+				&:last-child {
+					margin-left:10px;
+				}
+			}
+		}
+	}
+	.o-docking {
+		&__bottom {
+			.l-wrap {
+				width:620px;
+				.c-button {
+					&__column--one {
+						width:100%;
+						.c-button__large {
+							width:100%;
+						}	
+					}
+					&__column--two {
+						width:100%;
+						.c-button__large {
+							flex:1 1 auto;
+						}	
+					}
+				}
+			}
+		}
+	}
+}
+

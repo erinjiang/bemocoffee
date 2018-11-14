@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/*-- color --*/
+/*-- font size --*/
+/*-- font line height --*/
+/*-- Grids --*/
+/*-- border --*/
+/*-- box-sizing --*/
+/* line 3, ../sass/_extend.scss */
+div, span {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*-- Clear--*/
+/*-- border-radius--*/
+/*-- display-inline --*/
+/*-- 元件 Y軸 位移 --*/
+/*-- 陰影 --*/
+/*- for docking bottom-*/
+/* line 4, ../sass/layout.scss */
+html, body {
+  color: #2A2A2A;
+  font-size: 16px;
+  font-family: 微軟正黑體, "Microsoft JhengHei", Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+/* line 12, ../sass/layout.scss */
+img {
+  width: 100%;
+}
+
+/* line 24, ../sass/layout.scss */
+ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 27, ../sass/layout.scss */
+ul li {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 33, ../sass/layout.scss */
+#wallper {
+  width: 100%;
+}
+/* line 35, ../sass/layout.scss */
+#wallper .site-header {
+  width: 100%;
+  border-bottom: #2A2A2A 1px solid;
+}
+/* line 38, ../sass/layout.scss */
+#wallper .site-header .l-wrap {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 41, ../sass/layout.scss */
+#wallper .site-header .l-wrap a.o-logo {
+  display: block;
+  margin: 0 auto;
+}
+/* line 47, ../sass/layout.scss */
+#wallper .site-footer {
+  width: 100%;
+  color: #2A2A2A;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 54, ../sass/layout.scss */
+#wallper .site--main {
+  margin: 0 auto;
+}
+/* line 56, ../sass/layout.scss */
+#wallper .site--main .l-wrap {
+  min-height: 448px;
+  margin: 0 auto;
+}
+
+/*-------------------------------------------------------------- mobile --------------------------------------------------------------*/
+@media screen and (max-width: 599px) {
+  /* line 67, ../sass/layout.scss */
+  #wallper .l-wrap {
+    padding: 0 14px;
+  }
+  /* line 72, ../sass/layout.scss */
+  #wallper .site-header .l-wrap a.o-logo {
+    width: 92px;
+    height: 40px;
+  }
+  /* line 79, ../sass/layout.scss */
+  #wallper .site--main .l-wrap {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+/*-------------------------------------------------------------- tablet --------------------------------------------------------------*/
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  /* line 91, ../sass/layout.scss */
+  #wallper .l-wrap {
+    padding: 0 20px;
+  }
+  /* line 96, ../sass/layout.scss */
+  #wallper .site-header .l-wrap a.o-logo {
+    width: 92px;
+    height: 40px;
+  }
+  /* line 103, ../sass/layout.scss */
+  #wallper .site--main .l-wrap {
+    max-width: 960px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+/*-------------------------------------------------------------- pc --------------------------------------------------------------*/
+@media screen and (min-width: 1024px) {
+  /* line 116, ../sass/layout.scss */
+  #wallper .l-wrap {
+    padding: 0 20px;
+  }
+  /* line 121, ../sass/layout.scss */
+  #wallper .site-header .l-wrap a.o-logo {
+    width: 138px;
+    height: 60px;
+  }
+  /* line 128, ../sass/layout.scss */
+  #wallper .site-main .l-wrap {
+    max-width: 1200px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}

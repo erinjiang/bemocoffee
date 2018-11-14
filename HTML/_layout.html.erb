@@ -1,0 +1,51 @@
+<%
+$pathOfRoot = Pathname.new('/').relative_path_from(Pathname.new(request.path[0..request.path.rindex(/\//)]))
+%>
+<!doctype html>
+<html lang="zh-tw">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<% if content_for? :page_title %>
+	<%= yield :page_title %>
+	<% else %>
+	<title>BEMO Coffee</title>
+	<% end %>
+	<% if content_for? :page_meta %>
+	<%= yield :page_meta %>
+	<% else %>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<% end %>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<!--<link rel="apple-touch-icon" href="apple-touch-icon.png">-->
+	<!-- Place favicon.ico in the root directory -->
+	<link rel="shortcut icon" href="<%= $pathOfRoot %>/Content/images/favicon.ico" />
+	<link rel="stylesheet" href="<%= $pathOfRoot %>/Content/css/reset.css" /><!-- rest brower default setting -->
+	<link rel="stylesheet" href="<%= $pathOfRoot %>/Content/css/layout.css" />
+	<link rel="stylesheet" href="<%= $pathOfRoot %>/Content/css/element.css" /><!-- all Bemo site elemnet setting -->
+	<!-- Page CSS file -->
+	<% if content_for? :page_css %>
+	<%= yield :page_css %>
+	<% end %>
+	<!-- Page CSS file end -->
+	<script src="<%= $pathOfRoot %>/Content/js/jquery-3.3.1.min.js"></script>
+	<script src="<%= $pathOfRoot %>/Content/js/jquery.fancyform.min.js"></script>
+	<script src="<%= $pathOfRoot %>/Content/js/main.js"></script>
+</head>
+<body>
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<div id="wallper">
+		<%= render :partial => "header" %>
+		<section class="site-main">
+			<%= yield %>
+		</section>
+		<%= render :partial => "footer" %>
+	</div>
+	<% if content_for? :page_js %>
+	<%= yield :page_js %>
+	<% end %>
+</body>
+</html>

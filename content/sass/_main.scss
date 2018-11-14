@@ -1,0 +1,44 @@
+
+/*-- color --*/
+$u-color-white:#FFFFFF;
+$u-color-black:#2A2A2A;
+$u-color-drkGrey:#444444;
+$u-color-grey:#999999;
+$u-color-mediumGrey:#CCCCCC;
+$u-color-asgGrey:#EEEEEE;
+$u-color-lightGrey:#F8F8F8;
+$u-color-brown:#A37300;
+$u-color-orange:#C0522D;
+$u-color-disabled:#F2F2F2;
+
+/*-- font size --*/
+$-u-font-size-xs:14px;
+$-u-font-size-general:16px;
+$-u-font-size-s:18px;
+$-u-font-size-m:24px;
+$-u-font-size-l:30px;
+$-u-font-size-xl:36px;
+$-u-font-size-xxl:42px;
+
+
+/*-- font line height --*/
+$lineHeight:1.5;
+
+/*-- Grids --*/
+$col-1:8.33%;
+$col-2:16.66%;
+$col-3:25%;
+$col-4:33.33%;
+$col-5:41.66%;
+$col-6:50%;
+$col-7:58.33%;
+$col-8:66.66%;
+$col-9:75%;
+$col-10:83.33%;
+$col-11:91.66%;
+$col-12:100%;
+
+/*-- border --*/
+$-u-border-black:$u-color-black 1px solid;
+$-u-border-grey:$u-color-grey 1px solid;
+$-u-border-mediumgrey:$u-color-mediumGrey 1px solid;
