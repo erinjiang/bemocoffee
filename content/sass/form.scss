@@ -9,20 +9,6 @@
 	border:$-u-border-black;
 	@extend %-u-border-radius-s;
 	&__row {
-		// 第一列
-		&:first-child {
-			// 表單的下拉TOP加圓角
-			.o-select__form {
-				li {
-					@extend %-u-border-radius-top-s;
-					ul {
-						li {
-							@extend %-u-border-radius-clear-all;
-						}
-					}
-				}
-			}
-		}
 		// 最後一列
 		&:last-child {
 			border:none;
@@ -35,13 +21,7 @@
 			}
 			.o-select__form { 
 				li {
-					@extend %-u-border-radius-top-s;
 					border:none;
-					ul {
-						li {
-							@extend %-u-border-radius-clear-all;
-						}
-					}
 				}
 			}
 			// 最後一列的，最後一格的表單資料，取消border
@@ -95,11 +75,6 @@
 				border-right:none;
 			}
 		}
-	}
-	// 表單的下拉按下後
-	&.active {
-		//下拉TOP加圓角
-		@extend %-u-border-radius-top-s;
 	}
 }
 
@@ -157,10 +132,6 @@
 				.o-select__form { 
 					li {
 						border:none;
-						ul {
-							li {
-							}
-						}
 					}
 				}
 			}

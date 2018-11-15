@@ -15,20 +15,20 @@
 			<div class="l-form__row">
 				<div class="l-form__content">
 					<div class="o-radio">
-						<input type="radio" name="option" value="1" id="radio1" class="o-radio__input">
-						<label class="o-radio__tex" for="radio1">7-11 取貨付款</label>	
+						<input type="radio" class="o-radio__input" name="option_PM" id="option_PM_01" data-change-target="option_PM_01" value="" checked="checked">
+						<label class="o-radio__tex" for="option_PM_01">7-11 取貨付款</label>	
 					</div>
 					<div class="o-radio">
-						<input type="radio" name="option" value="1" id="radio2" class="o-radio__input">
-						<label class="o-radio__tex" for="radio2">全家、萊爾富 取貨付款</label>
+						<input type="radio" class="o-radio__input" name="option_PM" id="option_PM_02" data-change-target="option_PM_02" value="">
+						<label class="o-radio__tex" for="option_PM_02">全家、萊爾富 取貨付款</label>
 					</div>
 					<div class="o-radio">
-						<input type="radio" name="option" value="1" id="radio3" class="o-radio__input">
-						<label class="o-radio__tex" for="radio3">7-11 取貨不付款</label>
+						<input type="radio" class="o-radio__input" name="option_PM" id="option_PM_03" data-change-target="option_PM_03" value="">
+						<label class="o-radio__tex" for="option_PM_03">7-11 取貨不付款</label>
 					</div>
 					<div class="o-radio">
-						<input type="radio" name="option" value="1" id="radio3" class="o-radio__input">
-						<label class="o-radio__tex" for="radio3">信用卡付款</label>
+						<input type="radio" class="o-radio__input" name="option_PM" id="option_PM_04" data-change-target="option_PM_04" value="">
+						<label class="o-radio__tex" for="option_PM_04">信用卡付款</label>
 					</div>
 				</div>
 			</div>
@@ -37,7 +37,7 @@
 	<div class="l-wrap">
 		<h2 class="t-sTitle t5">收件資料</h2>
 		<!-- 7-11 取貨付款 -->
-		<form class="l-form">
+		<form class="l-form" data-change-id="option_PM_01">
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xl">
 					<input type="text" placeholder="中文姓名">
@@ -48,12 +48,14 @@
 			</div>
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xxl">
-					<div class="o-option__btn">選擇 7-11 收件門市</div>
+					<label>
+						<div class="o-option__btn">選擇 7-11 收件門市</div>
+					</label>
 				</div>
 			</div>
 		</form>
 		<!-- 全家、萊爾富 取貨付款 -->
-		<form class="l-form">
+		<form class="l-form" data-change-id="option_PM_02">
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xl">
 					<input type="text" placeholder="中文姓名">
@@ -64,12 +66,14 @@
 			</div>
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xxl">
-					<div class="o-option__btn">另開選項按鈕</div>
+					<label>
+						<div class="o-option__btn">全家、萊爾富 取貨付款</div>
+					</label>
 				</div>
 			</div>
 		</form>
 		<!-- 7-11 取貨不付款 -->
-		<form class="l-form">
+		<form class="l-form" data-change-id="option_PM_03">
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xl">
 					<input type="text" placeholder="中文姓名">
@@ -80,12 +84,14 @@
 			</div>
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xxl">
-					<div class="o-option__btn">另開選項按鈕</div>
+					<label>
+						<div class="o-option__btn">7-11 取貨不付款</div>
+					</label>
 				</div>
 			</div>
 		</form>
 		<!-- 信用卡付款 -->
-		<form class="l-form">
+		<form class="l-form" data-change-id="option_PM_04">
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xl">
 					<input type="text" placeholder="中文姓名">
@@ -127,11 +133,11 @@
 	</div>
 	<div class="l-wrap">
 		<div class="o-checkbox">
-			<input type="checkbox" name="option" value="1" id="option_UNINUM" class="o-checkbox__input">
+			<input type="checkbox" class="o-checkbox__input" name="option_UNINUM" id="option_UNINUM" data-option-target="option_UNINUM" value="">
 			<label class="o-checkbox__tex" for="option_UNINUM">需要開統一編號</label>
 		</div>
 		<!-- 統一編號 -->
-		<form class="l-form">
+		<form class="l-form" data-option-id="option_UNINUM">
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xl">
 					<input type="text" placeholder="公司名稱">
@@ -171,8 +177,27 @@
 			</div>
 		</form>
 		<div class="o-checkbox">
-			<input type="checkbox" name="option" value="2" id="option_return" class="o-checkbox__input">
+			<input type="checkbox" class="o-checkbox__input" name="option_return" id="option_return" value="">
 			<label class="o-checkbox__tex" for="option_return">我同意辦理退貨時，由 BEMO 代為處理電子發票及銷貨退回折讓單以加速退款作業。</label>
 		</div>
 	</div>
+
+	<div class="o-docking">
+			<div class="o-docking__bottom">
+				<div class="l-wrap">
+					<div class="c-sum">
+						<span class="c-sum__title">總金額</span>
+						<span class="c-sum__total">$0000000</span>
+					</div>
+				</div>
+				<div class="l-wrap">
+					<div class="c-button">
+						<div class="c-button__column--one">
+							<button type="submit" class="c-button__main c-button__large">主要按鈕</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 </div>

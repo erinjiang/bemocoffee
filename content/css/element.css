@@ -560,20 +560,21 @@ button:focus {
   /* line 494, ../sass/element.scss */
   .o-docking__bottom .l-wrap {
     width: 620px;
+    margin-bottom: 20px;
   }
-  /* line 497, ../sass/element.scss */
+  /* line 498, ../sass/element.scss */
   .o-docking__bottom .l-wrap .c-button__column--one {
     width: 100%;
   }
-  /* line 499, ../sass/element.scss */
+  /* line 500, ../sass/element.scss */
   .o-docking__bottom .l-wrap .c-button__column--one .c-button__large {
     width: 100%;
   }
-  /* line 503, ../sass/element.scss */
+  /* line 504, ../sass/element.scss */
   .o-docking__bottom .l-wrap .c-button__column--two {
     width: 100%;
   }
-  /* line 505, ../sass/element.scss */
+  /* line 506, ../sass/element.scss */
   .o-docking__bottom .l-wrap .c-button__column--two .c-button__large {
     flex: 1 1 auto;
   }

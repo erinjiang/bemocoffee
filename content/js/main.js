@@ -1,17 +1,17 @@
 $(function() {
 
-	//下拉選單
+	// 下拉選單
 	$('.select').transformSelect();
 	
-	//改變文字顏色
+	// 下拉選單點選後，改變文字顏色
 	$('.transformSelect').on('click', function(e){
-		//for pc
+		// for pc
 		if($('.open span').change()){
 			$('.open').addClass('changeColor');
 		}else {
 			$('.open').removeClass('changeColor');
 		}
-		//for mobile
+		// for mobile
 		if($('.select').change()){
 			$(this).children('li').addClass('changeColor');
 			$(this).children( 'li > ul li').removeClass('changeColor')
@@ -19,29 +19,48 @@ $(function() {
 			$(this).children('li').removeClass('changeColor');
 		}
 	});
-
-	//表單 點擊下拉時 
-	$('.o-select__form').on('click', function(e){
-		var selectActive = $('.o-select__form ul li');
-		//取消border-bottom
-		if($(selectActive).hasClass('open')){
-			$(this).parents('.l-form').addClass('active');
-		}else {
-			$(this).parents('.l-form').removeClass('active');
-		}
-	});
 	
-	//另開選項 BTN 帶入值的時候，改變文字顏色
-	$('.o-option__btn').on('click', function(e){
-		var options=$(".o-option__tex--01 option:selected");
-		// alert(options.text());
-		$(this).text(options.text());
-		if($(this).change()){
-			$(this).addClass('active');
-		}else {
-			$(this).removeClass('active');
-		}
+	// 另開選項 BTN 帶入值的時候，改變文字顏色 開始
+	$('.o-option__blank--option').hide();// 測試選項，在element.html中可看見demo
+	//[data-blank-target=o-option__blank]為物件id
+	$('[data-blank-target=o-option__blank]').on('click', function(e){
+		// 宣告一個名字給物件
+		var dataId = $(this);
+		
+		// 顯示測試選項
+		$('.o-option__blank--option').show();
+		// 將測試選項的文字帶回物件
+		$(".o-option__tex--01").on('change', function(e){
+			var options=$(".o-option__tex--01 option:selected");
+			$(dataId).text(options.text());
+			//當文文字帶回物件後，物件change，加上 class
+			if(dataId.change()){
+				$(dataId).addClass('active');
+			}else {
+				$(dataId).removeClass('active');
+			}
+		});
 	});
+	// 另開選項 BTN 帶入值的時候，改變文字顏色 結束
+
+
+	// 付款方式應對表單
+	$('[data-change-target]').on('change', function(e) {
+		var target = $('[data-change-target]:checked').data('change-target');
+		$('[data-change-id]').hide();
+		$('[data-change-id="' + target + '"]').show();
+		console.log(target);
+	}).trigger('change');
+
+	// 統一編號表單
+	$('[data-option-target]').on('change', function(e) {
+		var target = $('[data-option-target]:checked').data('option-target');
+		$('[data-option-id]').hide();
+		$('[data-option-id="' + target + '"]').show();
+		console.log(target);
+	}).trigger('change');
+
+
 
 });
 

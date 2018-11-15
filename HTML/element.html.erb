@@ -160,15 +160,17 @@
 		<form class="l-form">
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xxl">
-					<div class="o-option">
-						<div class="o-option__btn">選項按鈕</div>
-						<select class="o-option__tex--01">
-							<option value="1">請選擇</option>
-							<option value="2">選項一</option>
-							<option value="3">選項二</option>
-							<option value="4">選項三</option>
-						</select>
-					</div>
+					<label class="o-option">
+						<div class="o-option__btn" data-blank-target="o-option__blank">選項按鈕</div>
+						<div class="o-option__blank--option">
+							<select class="o-option__tex--01">
+								<option value="1">請選擇</option>
+								<option value="2">選項一</option>
+								<option value="3">選項二</option>
+								<option value="4">選項三</option>
+							</select>
+						</div>
+					</label>
 				</div>
 			</div>
 		</form>
@@ -215,7 +217,9 @@
 			</div>
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xxl">
-					<div class="o-option__btn">另開選項按鈕</div>
+					<label>
+						<div class="o-option__btn">另開選項按鈕</div>
+					</label>
 				</div>
 			</div>
 			<div class="l-form__row grid">
@@ -225,7 +229,9 @@
 			</div>
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xxl">
-					<div class="o-option__btn">另開選項按鈕</div>
+					<label>
+						<div class="o-option__btn">另開選項按鈕</div>
+					</label>
 				</div>
 			</div>
 		</form>
