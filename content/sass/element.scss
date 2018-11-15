@@ -52,14 +52,14 @@ p {
 	&-sTitle {
 		text-align:center;
 		margin-bottom:10px;
-	}
+	} 
 }
 
 /*------------------------- 選項 -------------------------*/
 
 .o-radio, .o-checkbox {
 	position:relative;
-	padding:15px 0;
+	padding-bottom:10px;
 	&__input {
 		position:absolute;
 		opacity:0;

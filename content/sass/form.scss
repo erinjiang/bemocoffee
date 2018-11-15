@@ -35,7 +35,7 @@
 			}
 			.o-select__form { 
 				li {
-					@extend %-u-border-radius-bottom-s;
+					@extend %-u-border-radius-top-s;
 					border:none;
 					ul {
 						li {
@@ -62,6 +62,8 @@
 		.o-radio, .o-checkbox {
 			padding-right:14px;
 			padding-left:14px;
+			padding-top:15px;
+			padding-bottom:15px;
 			border-bottom:$-u-border-mediumgrey;
 			&:last-child {
 				border:none;
@@ -107,6 +109,16 @@
 	/*-- 輸入表單 --*/
 	.l-form {
 		margin-bottom:30px;
+		&__row {
+			// 最後一列
+			&:last-child {
+				.o-select__form { 
+					li {
+						border-bottom:$-u-border-mediumgrey;
+					}
+				}
+			}
+		}
 		&__content {
 			&:nth-child(2) {
 				border-right:none;
@@ -139,5 +151,19 @@
 	/*-- 輸入表單 --*/
 	.l-form {
 		margin-bottom:50px;
+		&__row {
+			// 最後一列
+			&:last-child {
+				.o-select__form { 
+					li {
+						border:none;
+						ul {
+							li {
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }

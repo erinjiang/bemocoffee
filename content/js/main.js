@@ -19,10 +19,6 @@ $(function() {
 			$(this).children('li').removeClass('changeColor');
 		}
 	});
-	
-	if($('.o-select__form select:disabled')) {
-		alert('diabled');
-	}
 
 	//表單 點擊下拉時 
 	$('.o-select__form').on('click', function(e){
@@ -38,7 +34,7 @@ $(function() {
 	//另開選項 BTN 帶入值的時候，改變文字顏色
 	$('.o-option__btn').on('click', function(e){
 		var options=$(".o-option__tex--01 option:selected");
-		alert(options.text());
+		// alert(options.text());
 		$(this).text(options.text());
 		if($(this).change()){
 			$(this).addClass('active');

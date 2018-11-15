@@ -8,22 +8,171 @@
 <div class="site-content">
 	<div class="l-wrap">
 		<h1 class="t-section t4">取得試喝包</h1>
+	</div>
+	<div class="l-wrap">
 		<h2 class="t-sTitle t5">付款與收費方式</h2>
-		<div class="l-form">
-			<div class="l-form__row grid">
-				<div class="l-form__content--info col-lg">
-					項目內容
-				</div>
-				<div class="l-form__content--info col-lg">
-					項目內容
-				</div>
-			</div>
+		<form class="l-form">
 			<div class="l-form__row">
-				<div class="l-form__content--info">
-					<span class="info_title">項目標題</span>
-					<span class="info_detail">內容內容內容內容內容內容內容</span>
+				<div class="l-form__content">
+					<div class="o-radio">
+						<input type="radio" name="option" value="1" id="radio1" class="o-radio__input">
+						<label class="o-radio__tex" for="radio1">7-11 取貨付款</label>	
+					</div>
+					<div class="o-radio">
+						<input type="radio" name="option" value="1" id="radio2" class="o-radio__input">
+						<label class="o-radio__tex" for="radio2">全家、萊爾富 取貨付款</label>
+					</div>
+					<div class="o-radio">
+						<input type="radio" name="option" value="1" id="radio3" class="o-radio__input">
+						<label class="o-radio__tex" for="radio3">7-11 取貨不付款</label>
+					</div>
+					<div class="o-radio">
+						<input type="radio" name="option" value="1" id="radio3" class="o-radio__input">
+						<label class="o-radio__tex" for="radio3">信用卡付款</label>
+					</div>
 				</div>
 			</div>
+		</form>
+	</div>
+	<div class="l-wrap">
+		<h2 class="t-sTitle t5">收件資料</h2>
+		<!-- 7-11 取貨付款 -->
+		<form class="l-form">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xl">
+					<input type="text" placeholder="中文姓名">
+				</div>
+				<div class="l-form__content col-xl">
+					<input type="tel" placeholder="手機號碼">
+				</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xxl">
+					<div class="o-option__btn">選擇 7-11 收件門市</div>
+				</div>
+			</div>
+		</form>
+		<!-- 全家、萊爾富 取貨付款 -->
+		<form class="l-form">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xl">
+					<input type="text" placeholder="中文姓名">
+				</div>
+				<div class="l-form__content col-xl">
+					<input type="tel" placeholder="手機號碼">
+				</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xxl">
+					<div class="o-option__btn">另開選項按鈕</div>
+				</div>
+			</div>
+		</form>
+		<!-- 7-11 取貨不付款 -->
+		<form class="l-form">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xl">
+					<input type="text" placeholder="中文姓名">
+				</div>
+				<div class="l-form__content col-xl">
+					<input type="tel" placeholder="手機號碼">
+				</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xxl">
+					<div class="o-option__btn">另開選項按鈕</div>
+				</div>
+			</div>
+		</form>
+		<!-- 信用卡付款 -->
+		<form class="l-form">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xl">
+					<input type="text" placeholder="中文姓名">
+				</div>
+				<div class="l-form__content col-xl">
+					<input type="tel" placeholder="手機號碼">
+				</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content col-md">
+					<div class="o-select__form">
+						<select class="select selectSalary">
+							<option value="1">請選擇縣市</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__content col-md">
+					<div class="o-select__form">
+						<select class="select selectSalary">
+							<option value="1">請選擇</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__content col-xl">
+					<input type="text" placeholder="收件地址">
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="l-wrap">
+		<div class="o-checkbox">
+			<input type="checkbox" name="option" value="1" id="option_UNINUM" class="o-checkbox__input">
+			<label class="o-checkbox__tex" for="option_UNINUM">需要開統一編號</label>
+		</div>
+		<!-- 統一編號 -->
+		<form class="l-form">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xl">
+					<input type="text" placeholder="公司名稱">
+				</div>
+				<div class="l-form__content col-xl">
+					<input type="tel" placeholder="統一編號">
+				</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content col-md">
+					<div class="o-select__form">
+						<select class="select selectSalary">
+							<option value="1">請選擇縣市</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__content col-md">
+					<div class="o-select__form">
+						<select class="select selectSalary">
+							<option value="1">請選擇</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__content col-xl">
+					<input type="text" placeholder="詳細地址">
+				</div>
+			</div>
+		</form>
+		<div class="o-checkbox">
+			<input type="checkbox" name="option" value="2" id="option_return" class="o-checkbox__input">
+			<label class="o-checkbox__tex" for="option_return">我同意辦理退貨時，由 BEMO 代為處理電子發票及銷貨退回折讓單以加速退款作業。</label>
 		</div>
 	</div>
 </div>
