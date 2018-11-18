@@ -5,7 +5,7 @@
 <% content_for :page_css do %>
 <link rel="stylesheet" href="<%= $pathOfRoot %>/Content/css/form.css"/>
 <% end %>
-<div class="site-content">
+<div class="site-content l-docking">
 	<div class="l-wrap">
 		<H4 class="t-section t4">文字</H4>
 		<span class="smallFont">Header 1</span><H1 class="t1">Showers across the W</H1>
@@ -21,7 +21,7 @@
 		<form class="l-form">
 			<div class="l-form__row">
 				<div class="l-form__content">
-					<div class="o-radio">
+					<div class="o-radio error">
 						<input type="radio" name="option" value="1" id="radio1" class="o-radio__input">
 						<label class="o-radio__tex" for="radio1">選項一</label>	
 					</div>
@@ -39,7 +39,7 @@
 		<form class="l-form">
 			<div class="l-form__row">
 				<div class="l-form__content">
-					<div class="o-checkbox">
+					<div class="o-checkbox error">
 						<input type="checkbox" name="option" value="1" id="checkbox1" class="o-checkbox__input">
 						<label class="o-checkbox__tex" for="checkbox1">選項一</label>
 					</div>
@@ -176,7 +176,7 @@
 		</form>
 	</div>
 	<div class="l-wrap">
-		<H4 class="t-section t4">輸入框</H4>
+		<H4 class="t-section t4">表單</H4>
 		<form class="l-form">
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xl">
@@ -217,13 +217,6 @@
 			</div>
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xxl">
-					<label>
-						<div class="o-option__btn">另開選項按鈕</div>
-					</label>
-				</div>
-			</div>
-			<div class="l-form__row grid">
-				<div class="l-form__content col-xxl">
 					<input type="tel" placeholder="電話輸入框">
 				</div>
 			</div>
@@ -231,6 +224,66 @@
 				<div class="l-form__content col-xxl">
 					<label>
 						<div class="o-option__btn">另開選項按鈕</div>
+					</label>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="l-wrap">
+		<H4 class="t-section t4">表單 錯誤</H4>
+		<form class="l-form">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xl">
+					<input class="error" type="text" placeholder="中文姓名">
+					<span class="o-error--text">錯誤訊息</span>
+				</div>
+				<div class="l-form__content col-xl">
+					<input class="error" type="tel" placeholder="手機號碼">
+					<span class="o-error--text">錯誤訊息</span>
+				</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content col-md">
+					<div class="o-select__form error">
+						<select class="select selectSalary">
+							<option value="1">請選擇</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__content col-md">
+					<div class="o-select__form error">
+						<select class="select selectSalary">
+							<option value="1">請選擇</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+						<span class="o-error--text">錯誤訊息</span>
+					</div>
+				</div>
+				<div class="l-form__content col-xl">
+					<input class="error" type="text" placeholder="收件地址">
+					<span class="o-error--text">錯誤訊息</span>
+				</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xxl">
+					<input class="error" type="tel" placeholder="電話輸入框">
+					<span class="o-error--text">錯誤訊息</span>
+				</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xxl">
+					<label>
+						<div class="o-option__btn error">另開選項按鈕</div>
+						<span class="o-error--text">錯誤訊息</span>
 					</label>
 				</div>
 			</div>
@@ -266,10 +319,12 @@
 					項目內容
 				</div>
 			</div>
-			<div class="l-form__row">
-				<div class="l-form__content--info">
-					<span class="info_title">項目標題</span>
-					<span class="info_detail">內容內容內容內容內容內容內容</span>
+			<div class="l-form__row grid">
+				<div class="l-form__content--info col-xxl">
+					<div class="c-item">
+						<span class="c-item__title">項目標題</span>
+						<span class="c-item__detail">內容內容內容內容內容內容內容</span>
+					</div>
 				</div>
 			</div>
 		</form>
@@ -307,28 +362,27 @@
 			<div class="col col-xl">col-xl</div>
 		</div>
 	</div>
-</div>
-
-<div class="o-docking">
-	<div class="o-docking__bottom">
-		<div class="l-wrap">
-			<div class="c-sum">
-				<span class="c-sum__title">總金額</span>
-				<span class="c-sum__total">$0000000</span>
-			</div>
-		</div>
-		<div class="l-wrap">
-			<div class="c-button">
-				<div class="c-button__column--one">
-					<button type="submit" class="c-button__main c-button__large">主要按鈕</button>
+	<div class="o-docking">
+		<div class="o-docking__bottom">
+			<div class="l-wrap">
+				<div class="c-order__sum">
+					<span class="c-order__sum--title">總金額</span>
+					<span class="c-order__sum--total">$0000000</span>
 				</div>
 			</div>
-		</div>
-		<div class="l-wrap">
-			<div class="c-button">
-				<div class="c-button__column--two">
-					<button type="button" class="c-button__sec c-button__large">次要按鈕</button>
-					<button type="submit" class="c-button__main c-button__large">主要按鈕</button>
+			<div class="l-wrap">
+				<div class="c-button">
+					<div class="c-button__column--one">
+						<button type="submit" class="c-button__main c-button__large">主要按鈕</button>
+					</div>
+				</div>
+			</div>
+			<div class="l-wrap">
+				<div class="c-button">
+					<div class="c-button__column--two">
+						<button type="button" class="c-button__sec c-button__large">次要按鈕</button>
+						<button type="submit" class="c-button__main c-button__large">主要按鈕</button>
+					</div>
 				</div>
 			</div>
 		</div>

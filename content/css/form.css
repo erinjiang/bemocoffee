@@ -5,15 +5,6 @@
 /*-- Grids --*/
 /*-- border --*/
 /*-- box-sizing --*/
-/* line 3, ../sass/_extend.scss */
-.l-form__content--info span {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 /*-- Clear--*/
 /*-- border-radius--*/
 /* line 47, ../sass/_extend.scss */
@@ -29,41 +20,41 @@
 /*-- 陰影 --*/
 /*- for docking bottom-*/
 /*------------------------- 表單 -------------------------*/
-/* line 6, ../sass/form.scss */
+/* line 7, ../sass/form.scss */
 .l-form {
   display: block;
   background: #FFFFFF;
   border: #2A2A2A 1px solid;
 }
-/* line 13, ../sass/form.scss */
+/* line 14, ../sass/form.scss */
 .l-form__row:last-child {
   border: none;
 }
-/* line 16, ../sass/form.scss */
+/* line 17, ../sass/form.scss */
 .l-form__row:last-child input[type=text], .l-form__row:last-child [type=password], .l-form__row:last-child [type=email], .l-form__row:last-child [type=tel] {
   border: none;
 }
-/* line 19, ../sass/form.scss */
+/* line 20, ../sass/form.scss */
 .l-form__row:last-child .o-option__btn {
   border: none;
 }
-/* line 23, ../sass/form.scss */
+/* line 24, ../sass/form.scss */
 .l-form__row:last-child .o-select__form li {
   border: none;
 }
-/* line 29, ../sass/form.scss */
+/* line 30, ../sass/form.scss */
 .l-form__row:last-child .l-form__content--info {
   border: none;
 }
-/* line 36, ../sass/form.scss */
+/* line 37, ../sass/form.scss */
 .l-form__content {
   border-right: #CCCCCC 1px solid;
 }
-/* line 39, ../sass/form.scss */
+/* line 40, ../sass/form.scss */
 .l-form__content:last-child {
   border-right: none;
 }
-/* line 42, ../sass/form.scss */
+/* line 43, ../sass/form.scss */
 .l-form__content .o-radio, .l-form__content .o-checkbox {
   padding-right: 14px;
   padding-left: 14px;
@@ -71,11 +62,11 @@
   padding-bottom: 15px;
   border-bottom: #CCCCCC 1px solid;
 }
-/* line 48, ../sass/form.scss */
+/* line 49, ../sass/form.scss */
 .l-form__content .o-radio:last-child, .l-form__content .o-checkbox:last-child {
   border: none;
 }
-/* line 53, ../sass/form.scss */
+/* line 54, ../sass/form.scss */
 .l-form__content--info {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -86,22 +77,21 @@
   border-right: #CCCCCC 1px solid;
   border-bottom: #CCCCCC 1px solid;
 }
-/* line 62, ../sass/form.scss */
-.l-form__content--info span {
-  display: block;
-  float: left;
+/* line 63, ../sass/form.scss */
+.l-form__content--info:last-child {
+  border-right: none;
 }
-/* line 66, ../sass/form.scss */
-.l-form__content--info span.info_title {
-  width: 70px;
-}
-/* line 69, ../sass/form.scss */
-.l-form__content--info span.info_detail {
-  width: calc(100% - 70px);
-  padding-left: 10px;
+/* line 67, ../sass/form.scss */
+.l-form__content--info--NOBD {
+  padding-top: 10px;
+  padding-right: 14px;
+  padding-left: 14px;
+  overflow: hidden;
+  font-weight: bold;
+  border-right: #CCCCCC 1px solid;
 }
 /* line 74, ../sass/form.scss */
-.l-form__content--info:last-child {
+.l-form__content--info--NOBD:last-child {
   border-right: none;
 }
 
@@ -112,43 +102,65 @@
   .l-form {
     margin-bottom: 30px;
   }
-  /* line 91, ../sass/form.scss */
+  /* line 87, ../sass/form.scss */
+  .l-form:last-child {
+    margin-bottom: 0;
+  }
+  /* line 94, ../sass/form.scss */
   .l-form__row:last-child .o-select__form li {
     border-bottom: #CCCCCC 1px solid;
   }
-  /* line 98, ../sass/form.scss */
+  /* line 101, ../sass/form.scss */
   .l-form__content:nth-child(2) {
     border-right: none;
   }
-  /* line 101, ../sass/form.scss */
+  /* line 104, ../sass/form.scss */
   .l-form__content:last-child {
     border-right: none;
   }
-  /* line 104, ../sass/form.scss */
+  /* line 107, ../sass/form.scss */
   .l-form__content.col-xl {
     border-right: none;
   }
-  /* line 107, ../sass/form.scss */
+  /* line 110, ../sass/form.scss */
   .l-form__content.col-xxl {
     border-right: none;
   }
 }
 /*-------------------------------------------------------------- tablet --------------------------------------------------------------*/
 @media screen and (min-width: 600px) and (max-width: 1023px) {
+  /* line 120, ../sass/form.scss */
+  .l-wrap {
+    width: 580px;
+  }
+
   /*-- 輸入表單 --*/
-  /* line 118, ../sass/form.scss */
+  /* line 124, ../sass/form.scss */
   .l-form {
     margin-bottom: 50px;
+  }
+  /* line 126, ../sass/form.scss */
+  .l-form:last-child {
+    margin-bottom: 0;
   }
 }
 /*-------------------------------------------------------------- pc --------------------------------------------------------------*/
 @media screen and (min-width: 1024px) {
+  /* line 135, ../sass/form.scss */
+  .l-wrap {
+    width: 620px;
+  }
+
   /*-- 輸入表單 --*/
-  /* line 127, ../sass/form.scss */
+  /* line 139, ../sass/form.scss */
   .l-form {
     margin-bottom: 50px;
   }
-  /* line 133, ../sass/form.scss */
+  /* line 140, ../sass/form.scss */
+  .l-form:last-child {
+    margin-bottom: 0;
+  }
+  /* line 148, ../sass/form.scss */
   .l-form__row:last-child .o-select__form li {
     border: none;
   }

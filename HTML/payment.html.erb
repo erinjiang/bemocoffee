@@ -5,15 +5,45 @@
 <% content_for :page_css do %>
 <link rel="stylesheet" href="<%= $pathOfRoot %>/Content/css/form.css"/>
 <% end %>
-<div class="site-content">
+<div class="site-content l-docking">
 	<div class="l-wrap">
 		<h1 class="t-section t4">取得試喝包</h1>
+		<form class="l-form">
+			<div class="l-form__row grid">
+				<div class="l-form__content--info col-xxl">
+					<!-- 產品資訊 -->
+					<div class="c-order__PD">
+						<!-- 產品圖 -->
+						<div class="c-order__PD--img"><img src="../content/images/product/product.png" alt=""></div>
+						<div class="c-order__PD--info">
+							<!-- 產品名稱 -->
+							<div class="c-order__PD--name">產品名稱產品名稱產品名稱產品名稱產品名稱產品名稱產品名產品名稱產品名稱產品名稱產品名稱產品名稱產品名稱產品名產品名稱產品名稱產品名稱產品名稱產品名稱產品名稱產品名產品名稱產品名稱產品名稱產品名稱產品名稱產品名稱產品名稱產品名稱產品名稱產品名稱產品名稱</div>
+							<!-- 產品金額及數量 -->
+							<div class="c-order__PD--count">
+								<!-- 產品單價 -->
+								<span class="c-order__PD--price">$000</span>
+								<!-- 購買數量 -->
+								<span class="c-order__PD--quantity">X1</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content--info col-xxl">
+					<div class="c-order__sum">
+						<span class="c-order__sum--title">商品金額</span>
+						<span class="c-order__sum--count">$0</span>
+					</div>
+				</div>
+			</div>
+		</form>
 	</div>
 	<div class="l-wrap">
 		<h2 class="t-sTitle t5">付款與收費方式</h2>
 		<form class="l-form">
-			<div class="l-form__row">
-				<div class="l-form__content">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xxl">
 					<div class="o-radio">
 						<input type="radio" class="o-radio__input" name="option_PM" id="option_PM_01" data-change-target="option_PM_01" value="" checked="checked">
 						<label class="o-radio__tex" for="option_PM_01">7-11 取貨付款</label>	
@@ -137,7 +167,7 @@
 			<label class="o-checkbox__tex" for="option_UNINUM">需要開統一編號</label>
 		</div>
 		<!-- 統一編號 -->
-		<form class="l-form" data-option-id="option_UNINUM">
+		<form class="l-form mrBSetion" data-option-id="option_UNINUM">
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xl">
 					<input type="text" placeholder="公司名稱">
@@ -176,18 +206,17 @@
 				</div>
 			</div>
 		</form>
-		<div class="o-checkbox">
+		<div class="o-checkbox error">
 			<input type="checkbox" class="o-checkbox__input" name="option_return" id="option_return" value="">
 			<label class="o-checkbox__tex" for="option_return">我同意辦理退貨時，由 BEMO 代為處理電子發票及銷貨退回折讓單以加速退款作業。</label>
 		</div>
 	</div>
-
 	<div class="o-docking">
 			<div class="o-docking__bottom">
 				<div class="l-wrap">
-					<div class="c-sum">
-						<span class="c-sum__title">總金額</span>
-						<span class="c-sum__total">$0000000</span>
+					<div class="c-order__sum">
+						<span class="c-order__sum--title">總金額</span>
+						<span class="c-order__sum--total">$0000000</span>
 					</div>
 				</div>
 				<div class="l-wrap">
@@ -199,5 +228,5 @@
 				</div>
 			</div>
 		</div>
-
+	</div>
 </div>

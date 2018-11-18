@@ -3,6 +3,7 @@
 
 
 /*------------------------- 表單 -------------------------*/
+
 .l-form {
 	display:block;
 	background:$u-color-white;
@@ -59,18 +60,17 @@
 			font-weight:bold;
 			border-right:$-u-border-mediumgrey;
 			border-bottom:$-u-border-mediumgrey;
-			span {
-				@extend %-u-boxsizing;
-				display:block;
-				float:left;
-				&.info_title {
-					width:70px;
-				}
-				&.info_detail {
-					width:calc(100% - 70px);
-					padding-left:10px;
-				}
+			&:last-child {
+				border-right:none;
 			}
+		}
+		&--info--NOBD  {
+			padding-top:10px;
+			padding-right:14px;
+			padding-left:14px;
+			overflow:hidden;
+			font-weight:bold;
+			border-right:$-u-border-mediumgrey;
 			&:last-child {
 				border-right:none;
 			}
@@ -84,6 +84,9 @@
 	/*-- 輸入表單 --*/
 	.l-form {
 		margin-bottom:30px;
+		&:last-child {
+			margin-bottom:0;
+		}
 		&__row {
 			// 最後一列
 			&:last-child {
@@ -114,17 +117,29 @@
 
 /*-------------------------------------------------------------- tablet --------------------------------------------------------------*/
 @media screen and (min-width:600px) and (max-width:1023px) {
+	.l-wrap {
+		width:580px;
+	}
 	/*-- 輸入表單 --*/
 	.l-form {
 		margin-bottom:50px;
+		&:last-child {
+			margin-bottom:0;
+		}
 	}
 }
 
 
 /*-------------------------------------------------------------- pc --------------------------------------------------------------*/
 @media screen and (min-width:1024px) {
+	.l-wrap {
+		width:620px;
+	}
 	/*-- 輸入表單 --*/
 	.l-form {
+		&:last-child {
+			margin-bottom:0;
+		}
 		margin-bottom:50px;
 		&__row {
 			// 最後一列

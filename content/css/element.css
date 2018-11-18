@@ -6,7 +6,7 @@
 /*-- border --*/
 /*-- box-sizing --*/
 /* line 3, ../sass/_extend.scss */
-.o-radio__tex, .o-checkbox__tex, .o-radio__tex:before, .o-checkbox__tex:before, .o-option__btn, input[type=text], [type=password], [type=email], [type=tel], .o-select__form select, .o-select__form .transformSelect li, button {
+.o-radio__tex, .o-checkbox__tex, .o-radio__tex:before, .o-checkbox__tex:before, .o-option__btn, input[type=text], [type=password], [type=email], [type=tel], .o-select__form select, .o-select__form .transformSelect li, button, .c-item {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -62,89 +62,90 @@ button {
   box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.3);
 }
 
+/*------------------------- margin -------------------------*/
 /*------------------------- 字級 -------------------------*/
-/* line 6, ../sass/element.scss */
+/* line 9, ../sass/element.scss */
 .t1 {
   font-size: 42px;
   font-weight: bold;
 }
 
-/* line 11, ../sass/element.scss */
+/* line 14, ../sass/element.scss */
 .t2 {
   font-size: 36px;
   font-weight: bold;
 }
 
-/* line 16, ../sass/element.scss */
+/* line 19, ../sass/element.scss */
 .t3 {
   font-size: 30px;
   font-weight: bold;
 }
 
-/* line 21, ../sass/element.scss */
+/* line 24, ../sass/element.scss */
 .t4 {
   font-size: 24px;
   font-weight: bold;
 }
 
-/* line 26, ../sass/element.scss */
+/* line 29, ../sass/element.scss */
 .t5 {
   font-size: 18px;
   font-weight: bold;
 }
 
-/* line 31, ../sass/element.scss */
+/* line 34, ../sass/element.scss */
 .t6 {
   font-size: 16px;
   font-weight: bold;
 }
 
-/* line 36, ../sass/element.scss */
+/* line 39, ../sass/element.scss */
 p {
   font-size: 16px;
 }
 
-/* line 40, ../sass/element.scss */
+/* line 43, ../sass/element.scss */
 .smallFont {
   color: #999999;
   font-size: 14px;
 }
 
 /*-- 標題 --*/
-/* line 46, ../sass/element.scss */
+/* line 49, ../sass/element.scss */
 .t {
   /*-- 段落大標 --*/
 }
-/* line 48, ../sass/element.scss */
+/* line 51, ../sass/element.scss */
 .t-section {
   text-align: center;
   margin-bottom: 20px;
 }
-/* line 52, ../sass/element.scss */
+/* line 55, ../sass/element.scss */
 .t-sTitle {
   text-align: center;
   margin-bottom: 10px;
 }
 
 /*------------------------- 選項 -------------------------*/
-/* line 60, ../sass/element.scss */
+/* line 63, ../sass/element.scss */
 .o-radio, .o-checkbox {
   position: relative;
   padding-bottom: 10px;
 }
-/* line 63, ../sass/element.scss */
+/* line 66, ../sass/element.scss */
 .o-radio__input, .o-checkbox__input {
   position: absolute;
   opacity: 0;
 }
-/* line 67, ../sass/element.scss */
+/* line 70, ../sass/element.scss */
 .o-radio__tex, .o-checkbox__tex {
   position: relative;
   display: block;
   padding: 3px 0 3px 40px;
   cursor: pointer;
 }
-/* line 73, ../sass/element.scss */
+/* line 76, ../sass/element.scss */
 .o-radio__tex:before, .o-checkbox__tex:before {
   background-color: #FFFFFF;
   position: absolute;
@@ -156,7 +157,7 @@ p {
   margin-right: 10px;
   border: #999999 1px solid;
 }
-/* line 87, ../sass/element.scss */
+/* line 90, ../sass/element.scss */
 .o-radio__input:checked + .o-radio__tex:before, .o-checkbox__input:checked + .o-radio__tex:before, .o-radio__input:checked + .o-checkbox__tex:before, .o-checkbox__input:checked + .o-checkbox__tex:before {
   background-color: #2A2A2A;
   background-image: url(../images/icon/check.png);
@@ -165,9 +166,17 @@ p {
   background-repeat: no-repeat;
   border: #2A2A2A 1px solid;
 }
+/* line 99, ../sass/element.scss */
+.o-radio.error .o-radio__tex, .o-radio.error .o-checkbox__tex, .o-checkbox.error .o-radio__tex, .o-checkbox.error .o-checkbox__tex {
+  color: #D0021B;
+}
+/* line 101, ../sass/element.scss */
+.o-radio.error .o-radio__tex:before, .o-radio.error .o-checkbox__tex:before, .o-checkbox.error .o-radio__tex:before, .o-checkbox.error .o-checkbox__tex:before {
+  border: #D0021B 1px solid;
+}
 
 /*-- 單選 --*/
-/* line 100, ../sass/element.scss */
+/* line 111, ../sass/element.scss */
 .o-radio__tex:before {
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
@@ -177,7 +186,7 @@ p {
 
 /*-- 複選 --*/
 /*-- 另開選項按鈕 --*/
-/* line 119, ../sass/element.scss */
+/* line 130, ../sass/element.scss */
 .o-option__btn {
   position: relative;
   width: 100%;
@@ -186,7 +195,7 @@ p {
   border-bottom: #CCCCCC 1px solid;
   cursor: pointer;
 }
-/* line 127, ../sass/element.scss */
+/* line 138, ../sass/element.scss */
 .o-option__btn:after {
   content: " ";
   display: block;
@@ -200,13 +209,22 @@ p {
   background-repeat: no-repeat;
   background-size: 16px;
 }
-/* line 140, ../sass/element.scss */
+/* line 151, ../sass/element.scss */
 .o-option__btn.active {
   color: #2A2A2A;
 }
+/* line 154, ../sass/element.scss */
+.o-option__btn.error {
+  color: #D0021B;
+  border-bottom: #D0021B 1px solid;
+}
+/* line 157, ../sass/element.scss */
+.o-option__btn.error:after {
+  background-image: url(../images/icon/arrow/red/right.png);
+}
 
 /*------------------------- 輸入框 -------------------------*/
-/* line 147, ../sass/element.scss */
+/* line 165, ../sass/element.scss */
 input[type=text], [type=password], [type=email], [type=tel] {
   background: transparent;
   color: #2A2A2A;
@@ -219,36 +237,41 @@ input[type=text], [type=password], [type=email], [type=tel] {
   padding: 13px 14px;
   border-bottom: #CCCCCC 1px solid;
 }
+/* line 178, ../sass/element.scss */
+input[type=text].error, [type=password].error, [type=email].error, [type=tel].error {
+  color: #D0021B;
+  border-bottom: #D0021B 1px solid;
+}
 
-/* line 162, ../sass/element.scss */
+/* line 184, ../sass/element.scss */
 input:focus {
   outline: none;
 }
 
 /*-- 提示文字 --*/
-/* line 167, ../sass/element.scss */
+/* line 189, ../sass/element.scss */
 ::-webkit-input-placeholder {
   color: #999999;
 }
 
-/* line 170, ../sass/element.scss */
+/* line 192, ../sass/element.scss */
 ::-moz-placeholder {
   color: #999999;
 }
 
-/* line 173, ../sass/element.scss */
+/* line 195, ../sass/element.scss */
 :-moz-placeholder {
   color: #999999;
 }
 
-/* line 176, ../sass/element.scss */
+/* line 198, ../sass/element.scss */
 :-ms-input-placeholder {
   color: #999999;
 }
 
 /*------------------------- 下拉選單 -------------------------*/
 /*-- 表單下拉 --*/
-/* line 185, ../sass/element.scss */
+/* line 207, ../sass/element.scss */
 .o-select__form select {
   background: transparent;
   color: #2A2A2A;
@@ -259,18 +282,18 @@ input:focus {
   margin: 0;
   padding: 13px 40px 13px 14px;
 }
-/* line 196, ../sass/element.scss */
+/* line 218, ../sass/element.scss */
 .o-select__form .transformSelect {
   position: relative;
 }
-/* line 198, ../sass/element.scss */
+/* line 220, ../sass/element.scss */
 .o-select__form .transformSelect li {
   height: 50px;
   list-style: none;
   position: relative;
   border-bottom: #CCCCCC 1px solid;
 }
-/* line 204, ../sass/element.scss */
+/* line 226, ../sass/element.scss */
 .o-select__form .transformSelect li span {
   line-height: 1.5;
   display: block;
@@ -279,7 +302,7 @@ input:focus {
   padding: 13px 40px 13px 14px;
   cursor: pointer;
 }
-/* line 211, ../sass/element.scss */
+/* line 233, ../sass/element.scss */
 .o-select__form .transformSelect li span:after {
   content: " ";
   display: block;
@@ -293,7 +316,7 @@ input:focus {
   background-repeat: no-repeat;
   background-size: 16px;
 }
-/* line 227, ../sass/element.scss */
+/* line 249, ../sass/element.scss */
 .o-select__form .transformSelect li ul {
   position: absolute;
   margin-top: -1px;
@@ -303,44 +326,65 @@ input:focus {
   border-bottom: #2A2A2A 1px solid;
   border-left: #2A2A2A 1px solid;
 }
-/* line 235, ../sass/element.scss */
+/* line 257, ../sass/element.scss */
 .o-select__form .transformSelect li ul li {
   border: none;
 }
-/* line 237, ../sass/element.scss */
+/* line 259, ../sass/element.scss */
 .o-select__form .transformSelect li ul li span {
   background: #FFFFFF;
   padding: 13px 14px;
   color: #2A2A2A;
 }
-/* line 241, ../sass/element.scss */
+/* line 263, ../sass/element.scss */
 .o-select__form .transformSelect li ul li span:after {
   display: none;
 }
-/* line 244, ../sass/element.scss */
+/* line 266, ../sass/element.scss */
 .o-select__form .transformSelect li ul li span:hover {
   background: #2A2A2A;
   color: #FFFFFF;
 }
-/* line 252, ../sass/element.scss */
+/* line 275, ../sass/element.scss */
+.o-select__form .transformSelect li.open span:after {
+  background-image: url(../images/icon/arrow/black/up.png);
+}
+/* line 279, ../sass/element.scss */
 .o-select__form .transformSelect li.open ul {
   border-top: #2A2A2A 1px solid;
 }
-/* line 255, ../sass/element.scss */
+/* line 282, ../sass/element.scss */
 .o-select__form .transformSelect li.open ul li span {
   border: none;
 }
-/* line 263, ../sass/element.scss */
+/* line 290, ../sass/element.scss */
 .o-select__form .transformSelect .changeColor span {
   color: #2A2A2A;
 }
-/* line 269, ../sass/element.scss */
+/* line 296, ../sass/element.scss */
 .o-select__form .transformSelect .changeColor ul li span:hover {
   color: #FFFFFF;
 }
+/* line 306, ../sass/element.scss */
+.o-select__form.error .transformSelect li {
+  border-bottom: #D0021B 1px solid;
+}
+/* line 308, ../sass/element.scss */
+.o-select__form.error .transformSelect li span {
+  color: #D0021B;
+}
+/* line 310, ../sass/element.scss */
+.o-select__form.error .transformSelect li span:after {
+  background-image: url(../images/icon/arrow/red/down.png);
+}
+/* line 316, ../sass/element.scss */
+.o-select__form.error .transformSelect li ul li span {
+  color: #2A2A2A;
+  border: none;
+}
 
 /*------------------------- 按鈕 -------------------------*/
-/* line 282, ../sass/element.scss */
+/* line 330, ../sass/element.scss */
 button {
   font-size: 16px;
   font-weight: bold;
@@ -350,31 +394,31 @@ button {
   cursor: pointer;
 }
 
-/* line 293, ../sass/element.scss */
+/* line 341, ../sass/element.scss */
 button:focus {
   outline: none;
 }
 
-/* line 298, ../sass/element.scss */
+/* line 346, ../sass/element.scss */
 .c-button {
   margin-bottom: 10px;
   text-align: center;
 }
-/* line 302, ../sass/element.scss */
+/* line 350, ../sass/element.scss */
 .c-button__large {
   padding: 18px 20px;
 }
-/* line 306, ../sass/element.scss */
+/* line 354, ../sass/element.scss */
 .c-button__main {
   background: #2A2A2A;
   color: #FFFFFF;
 }
-/* line 311, ../sass/element.scss */
+/* line 359, ../sass/element.scss */
 .c-button__sec {
   background: #EEEEEE;
   color: #444444;
 }
-/* line 319, ../sass/element.scss */
+/* line 367, ../sass/element.scss */
 .c-button__column--two {
   display: -webkit-inline-flex;
   display: -moz-inline-flex;
@@ -393,34 +437,72 @@ button:focus {
   align-content: flex-start;
 }
 
-/* line 338, ../sass/element.scss */
-.o-docking {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
-/* line 344, ../sass/element.scss */
-.o-docking__bottom {
-  background: #FFFFFF;
-  width: 100%;
-  padding-top: 10px;
+/*-- 與訂單有關的資料欄位組件，可以用在 payment，以及 oder deatil --*/
+/* line 388, ../sass/element.scss */
+.c-order__PD {
   overflow: hidden;
 }
-/* line 352, ../sass/element.scss */
-.o-docking .c-sum {
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  border-bottom: #CCCCCC 1px solid;
+/* line 390, ../sass/element.scss */
+.c-order__PD--img {
+  width: 80px;
+  height: 80px;
+  float: left;
 }
-/* line 360, ../sass/element.scss */
-.o-docking .c-button__column--two .c-button__large {
+/* line 395, ../sass/element.scss */
+.c-order__PD--info {
+  width: calc((100% - 80px) - 10px);
+  padding-left: 10px;
+  float: left;
+}
+/* line 400, ../sass/element.scss */
+.c-order__PD--name {
+  position: relative;
+  height: 48px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* line 405, ../sass/element.scss */
+.c-order__PD--name:before {
+  position: absolute;
+  display: block;
+  content: '...';
+  right: 0;
+  bottom: 0;
+  padding-left: 5px;
+  background: #FFFFFF;
+}
+/* line 415, ../sass/element.scss */
+.c-order__PD--count {
+  width: 100%;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  display: inline-flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -webkit-align-content: flex-start;
+  -moz-align-content: flex-start;
+  -ms-align-content: flex-start;
+  -o-align-content: flex-start;
+  align-content: flex-start;
+}
+/* line 433, ../sass/element.scss */
+.c-order__PD--price {
   flex: 1 1 auto;
+  color: #999999;
 }
-
-/*-- 金額欄位，可以用在 payment，以及 oder deatil --*/
-/* line 368, ../sass/element.scss */
-.c-sum {
+/* line 437, ../sass/element.scss */
+.c-order__PD--quantity {
+  flex: 1 1 auto;
+  text-align: right;
+  color: #999999;
+}
+/* line 444, ../sass/element.scss */
+.c-order__sum {
   width: 100%;
   display: -webkit-inline-flex;
   display: -moz-inline-flex;
@@ -439,143 +521,160 @@ button:focus {
   align-content: flex-start;
   font-weight: bold;
 }
-/* line 386, ../sass/element.scss */
-.c-sum__title {
+/* line 463, ../sass/element.scss */
+.c-order__sum--title {
   flex: 1 1 auto;
 }
-/* line 389, ../sass/element.scss */
-.c-sum__count {
+/* line 467, ../sass/element.scss */
+.c-order__sum--count {
   flex: 1 1 auto;
   text-align: right;
 }
-/* line 393, ../sass/element.scss */
-.c-sum__total {
+/* line 472, ../sass/element.scss */
+.c-order__sum--total {
   flex: 1 1 auto;
   text-align: right;
   color: #A37300;
 }
 
+/*-- 小標帶內文 --*/
+/* line 482, ../sass/element.scss */
+.c-item {
+  display: block;
+  float: left;
+}
+/* line 486, ../sass/element.scss */
+.c-item__title {
+  width: 70px;
+}
+/* line 489, ../sass/element.scss */
+.c-item__detail {
+  width: calc(100% - 70px);
+  padding-left: 10px;
+}
+
+/*-- 固定在畫面的區塊 --*/
+/* line 496, ../sass/element.scss */
+.o-docking {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+/* line 502, ../sass/element.scss */
+.o-docking__bottom {
+  background: #FFFFFF;
+  width: 100%;
+  padding-top: 10px;
+  overflow: hidden;
+}
+/* line 510, ../sass/element.scss */
+.o-docking .c-order__sum {
+  padding-bottom: 10px;
+  border-bottom: #CCCCCC 1px solid;
+}
+/* line 517, ../sass/element.scss */
+.o-docking .c-button__column--one .c-button__large {
+  width: 100%;
+}
+/* line 522, ../sass/element.scss */
+.o-docking .c-button__column--two .c-button__large {
+  flex: 1 1 auto;
+}
+
+/* line 529, ../sass/element.scss */
+.o-error--text {
+  background-color: #FFE7EA;
+  position: absolute;
+  color: #D0021B;
+  font-size: 14px;
+  display: block;
+  padding: 0 5px;
+  left: 14px;
+  bottom: -10px;
+}
+
 /*-------------------------------------------------------------- mobile --------------------------------------------------------------*/
 @media screen and (max-width: 599px) {
   /*------------------------- 按鈕 -------------------------*/
-  /* line 405, ../sass/element.scss */
+  /* line 546, ../sass/element.scss */
   .c-button__column--one {
     width: 100%;
   }
-  /* line 407, ../sass/element.scss */
+  /* line 548, ../sass/element.scss */
   .c-button__column--one .c-button__large {
     width: 100%;
   }
-  /* line 411, ../sass/element.scss */
+  /* line 552, ../sass/element.scss */
   .c-button__column--two {
     width: 100%;
   }
-  /* line 413, ../sass/element.scss */
+  /* line 554, ../sass/element.scss */
   .c-button__column--two .c-button__large {
     flex: 1 1 auto;
   }
-  /* line 415, ../sass/element.scss */
+  /* line 556, ../sass/element.scss */
   .c-button__column--two .c-button__large:first-child {
     margin-right: 7px;
   }
-  /* line 418, ../sass/element.scss */
+  /* line 559, ../sass/element.scss */
   .c-button__column--two .c-button__large:last-child {
     margin-left: 7px;
-  }
-
-  /* line 425, ../sass/element.scss */
-  .o-docking__bottom {
-    padding-top: 10px;
-  }
-  /* line 427, ../sass/element.scss */
-  .o-docking__bottom .l-wrap {
-    width: 100%;
   }
 }
 /*-------------------------------------------------------------- tablet --------------------------------------------------------------*/
 @media screen and (min-width: 600px) and (max-width: 1023px) {
   /*------------------------- 按鈕 -------------------------*/
-  /* line 439, ../sass/element.scss */
+  /* line 572, ../sass/element.scss */
   .c-button__column--one {
     width: 100%;
   }
-  /* line 441, ../sass/element.scss */
+  /* line 574, ../sass/element.scss */
   .c-button__column--one .c-button__large {
     width: 220px;
   }
-  /* line 445, ../sass/element.scss */
+  /* line 578, ../sass/element.scss */
   .c-button__column--two {
     width: 100%;
   }
-  /* line 447, ../sass/element.scss */
+  /* line 580, ../sass/element.scss */
   .c-button__column--two .c-button__large {
     width: 220px;
   }
-  /* line 449, ../sass/element.scss */
+  /* line 582, ../sass/element.scss */
   .c-button__column--two .c-button__large:first-child {
     margin-right: 10px;
   }
-  /* line 452, ../sass/element.scss */
+  /* line 585, ../sass/element.scss */
   .c-button__column--two .c-button__large:last-child {
     margin-left: 10px;
-  }
-
-  /* line 459, ../sass/element.scss */
-  .o-docking__bottom {
-    padding-top: 20px;
-  }
-  /* line 461, ../sass/element.scss */
-  .o-docking__bottom .l-wrap {
-    width: 100%;
   }
 }
 /*-------------------------------------------------------------- pc --------------------------------------------------------------*/
 @media screen and (min-width: 1024px) {
   /*------------------------- 按鈕 -------------------------*/
-  /* line 473, ../sass/element.scss */
+  /* line 598, ../sass/element.scss */
   .c-button__column--one {
     width: 100%;
   }
-  /* line 475, ../sass/element.scss */
+  /* line 600, ../sass/element.scss */
   .c-button__column--one .c-button__large {
     width: 220px;
   }
-  /* line 479, ../sass/element.scss */
+  /* line 604, ../sass/element.scss */
   .c-button__column--two {
     width: 100%;
   }
-  /* line 481, ../sass/element.scss */
+  /* line 606, ../sass/element.scss */
   .c-button__column--two .c-button__large {
     width: 220px;
   }
-  /* line 483, ../sass/element.scss */
+  /* line 608, ../sass/element.scss */
   .c-button__column--two .c-button__large:first-child {
     margin-right: 10px;
   }
-  /* line 486, ../sass/element.scss */
+  /* line 611, ../sass/element.scss */
   .c-button__column--two .c-button__large:last-child {
     margin-left: 10px;
-  }
-
-  /* line 494, ../sass/element.scss */
-  .o-docking__bottom .l-wrap {
-    width: 620px;
-    margin-bottom: 20px;
-  }
-  /* line 498, ../sass/element.scss */
-  .o-docking__bottom .l-wrap .c-button__column--one {
-    width: 100%;
-  }
-  /* line 500, ../sass/element.scss */
-  .o-docking__bottom .l-wrap .c-button__column--one .c-button__large {
-    width: 100%;
-  }
-  /* line 504, ../sass/element.scss */
-  .o-docking__bottom .l-wrap .c-button__column--two {
-    width: 100%;
-  }
-  /* line 506, ../sass/element.scss */
-  .o-docking__bottom .l-wrap .c-button__column--two .c-button__large {
-    flex: 1 1 auto;
   }
 }

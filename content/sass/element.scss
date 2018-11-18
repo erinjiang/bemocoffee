@@ -1,6 +1,9 @@
 @import "_main";
 @import "_extend";
 
+/*------------------------- margin -------------------------*/
+.mrBSetion {
+}
 
 /*------------------------- 字級 -------------------------*/
 .t1 {
@@ -92,6 +95,14 @@ p {
 		background-repeat:no-repeat;
 		border:$-u-border-black;
 	}
+	&.error {
+		.o-radio__tex, .o-checkbox__tex {
+			color:$u-color-red;
+			&:before {
+				border:$-u-border-red;
+			}
+		}
+	}
 }
 
 /*-- 單選 --*/
@@ -140,6 +151,13 @@ p {
 	&.active {
 		color:$u-color-black;
 	}
+	&.error {
+		color:$u-color-red;
+		border-bottom:$-u-border-red;
+		&:after {
+			background-image: url(../images/icon/arrow/red/right.png);
+		}
+	}
 }
 
 /*------------------------- 輸入框 -------------------------*/
@@ -157,6 +175,10 @@ input[type=text], [type=password], [type=email], [type=tel] {
 	@extend %-u-boxsizing;
 	@extend %-u-border-radius-clear-all;
 	border-bottom:$-u-border-mediumgrey;
+	&.error {
+		color:$u-color-red;
+		border-bottom:$-u-border-red;
+	}
 }
 
 input:focus {
@@ -249,6 +271,11 @@ input:focus {
 				}
 			}
 			&.open {
+				span {
+					&:after {
+						background-image: url(../images/icon/arrow/black/up.png);
+					}
+				}
 				ul {
 					border-top:$-u-border-black;
 					li {
@@ -268,6 +295,27 @@ input:focus {
 					span {
 						&:hover {
 							color:$u-color-white;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.error {
+		.transformSelect {
+			li {
+				border-bottom:$-u-border-red;
+				span {
+					color:$u-color-red;
+					&:after {
+						background-image: url(../images/icon/arrow/red/down.png);
+					}
+				}
+				ul {
+					li {
+						span {
+							color:$u-color-black;
+							border:none;
 						}
 					}
 				}
@@ -335,6 +383,116 @@ button:focus {
 	}
 }
 
+/*-- 與訂單有關的資料欄位組件，可以用在 payment，以及 oder deatil --*/
+.c-order {
+	&__PD {
+		overflow:hidden;
+		&--img {
+			width:80px;
+			height:80px;
+			float:left;
+		}
+		&--info {
+			width:calc((100% - 80px) - 10px);
+			padding-left:10px;
+			float:left;
+		}
+		&--name{
+			position:relative;
+			height:48px;
+			text-overflow:ellipsis;
+			overflow:hidden;
+			&:before {
+				position:absolute;
+				display:block;
+				content:'...';
+				right:0;
+				bottom:0;
+				padding-left: 5px;
+				background:$u-color-white;
+			}
+		}
+		&--count {
+			width:100%;
+			display:-webkit-inline-flex;
+			display:-moz-inline-flex;
+			display:-ms-inline-flex;
+			display:-o-inline-flex;
+			display:inline-flex;
+			-webkit-justify-content:center;
+			-moz-justify-content:center;
+			-ms-justify-content:center;
+			-o-justify-content:center;
+			justify-content:center;
+			-webkit-align-content:flex-start;
+			-moz-align-content:flex-start;
+			-ms-align-content:flex-start;
+			-o-align-content:flex-start;
+			align-content:flex-start;
+		}
+		&--price {
+			flex:1 1 auto;
+			color:$u-color-grey;
+		}
+		&--quantity {
+			flex:1 1 auto;
+			text-align:right;
+			color:$u-color-grey;
+		}
+	}
+	// 金額欄位
+	&__sum {
+		width:100%;
+		display:-webkit-inline-flex;
+		display:-moz-inline-flex;
+		display:-ms-inline-flex;
+		display:-o-inline-flex;
+		display:inline-flex;
+		-webkit-justify-content:center;
+		-moz-justify-content:center;
+		-ms-justify-content:center;
+		-o-justify-content:center;
+		justify-content:center;
+		-webkit-align-content:flex-start;
+		-moz-align-content:flex-start;
+		-ms-align-content:flex-start;
+		-o-align-content:flex-start;
+		align-content:flex-start;
+		font-weight:bold;
+		// 標題
+		&--title {
+			flex:1 1 auto;
+		}
+		// 小計
+		&--count {
+			flex:1 1 auto;
+			text-align:right;
+		}
+		// 總金額
+		&--total {
+			flex:1 1 auto;
+			text-align:right;
+			color:$u-color-brown;
+		}
+	}
+
+}
+
+/*-- 小標帶內文 --*/
+.c-item  {
+	@extend %-u-boxsizing;
+	display:block;
+	float:left;
+	&__title {
+		width:70px;
+	}
+	&__detail {
+		width:calc(100% - 70px);
+		padding-left:10px;
+	}
+}
+
+/*-- 固定在畫面的區塊 --*/
 .o-docking {
 	position:fixed;
 	left:0;
@@ -349,13 +507,17 @@ button:focus {
 		overflow:hidden;
 	}
 	// 金額欄位
-	.c-sum {
-		margin-bottom:10px;
+	.c-order__sum {
 		padding-bottom:10px;
 		border-bottom:$-u-border-mediumgrey;
 	}
 	// docking 時候的 button
 	.c-button {
+		&__column--one {
+			.c-button__large {
+				width:100%;
+			}
+		}
 		&__column--two {
 			.c-button__large {
 				flex:1 1 auto;
@@ -364,38 +526,17 @@ button:focus {
 	}
 }
 
-/*-- 金額欄位，可以用在 payment，以及 oder deatil --*/
-.c-sum {
-	width:100%;
-	display:-webkit-inline-flex;
-	display:-moz-inline-flex;
-	display:-ms-inline-flex;
-	display:-o-inline-flex;
-	display:inline-flex;
-	-webkit-justify-content:center;
-	-moz-justify-content:center;
-	-ms-justify-content:center;
-	-o-justify-content:center;
-	justify-content:center;
-	-webkit-align-content:flex-start;
-	-moz-align-content:flex-start;
-	-ms-align-content:flex-start;
-	-o-align-content:flex-start;
-	align-content:flex-start;
-	font-weight:bold;
-	&__title {
-		flex:1 1 auto;
-	}
-	&__count {
-		flex:1 1 auto;
-		text-align:right;
-	}
-	&__total {
-		flex:1 1 auto;
-		text-align:right;
-		color:$u-color-brown;
-	}
+.o-error--text {
+    background-color:$u-color-lightPink;
+	position:absolute;
+	color:$u-color-red;
+	font-size:$-u-font-size-xs;
+    display:block;
+	padding:0 5px;
+	left:14px;
+	bottom:-10px;
 }
+
 
 
 /*-------------------------------------------------------------- mobile --------------------------------------------------------------*/
@@ -418,14 +559,6 @@ button:focus {
 				&:last-child {
 					margin-left:7px;
 				}
-			}
-		}
-	}
-	.o-docking {
-		&__bottom {
-			padding-top:10px;
-			.l-wrap {
-				width:100%;
 			}
 		}
 	}
@@ -455,14 +588,6 @@ button:focus {
 			}
 		}
 	}
-	.o-docking {
-		&__bottom {
-			padding-top:20px;
-			.l-wrap {
-				width:100%;
-			}
-		}
-	}
 }
 
 
@@ -485,28 +610,6 @@ button:focus {
 				}
 				&:last-child {
 					margin-left:10px;
-				}
-			}
-		}
-	}
-	.o-docking {
-		&__bottom {
-			.l-wrap {
-				width:620px;
-				margin-bottom:20px;
-				.c-button {
-					&__column--one {
-						width:100%;
-						.c-button__large {
-							width:100%;
-						}	
-					}
-					&__column--two {
-						width:100%;
-						.c-button__large {
-							flex:1 1 auto;
-						}	
-					}
 				}
 			}
 		}

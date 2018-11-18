@@ -10,7 +10,8 @@ $u-color-lightGrey:#F8F8F8;
 $u-color-brown:#A37300;
 $u-color-orange:#C0522D;
 $u-color-disabled:#F2F2F2;
-
+$u-color-red:#D0021B;
+$u-color-lightPink:#FFE7EA;
 /*-- font size --*/
 $-u-font-size-xs:14px;
 $-u-font-size-general:16px;
@@ -42,3 +43,4 @@ $col-12:100%;
 $-u-border-black:$u-color-black 1px solid;
 $-u-border-grey:$u-color-grey 1px solid;
 $-u-border-mediumgrey:$u-color-mediumGrey 1px solid;
+$-u-border-red:$u-color-red 1px solid;
