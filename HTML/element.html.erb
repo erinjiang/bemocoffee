@@ -157,19 +157,22 @@
 	</div>
 	<div class="l-wrap">
 		<H4 class="t-section t4">另開選項</H4>
+		<H3 class="t-section t4">一般狀態</H3>
 		<form class="l-form">
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xxl">
 					<label class="o-option">
 						<div class="o-option__btn" data-blank-target="o-option__blank">選項按鈕</div>
-						<div class="o-option__blank--option">
-							<select class="o-option__tex--01">
-								<option value="1">請選擇</option>
-								<option value="2">選項一</option>
-								<option value="3">選項二</option>
-								<option value="4">選項三</option>
-							</select>
-						</div>
+					</label>
+				</div>
+			</div>
+		</form>
+		<H3 class="t-section t4">有值帶入後</H3>
+		<form class="l-form">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xxl">
+					<label class="o-option">
+						<div class="o-option__btn active" data-blank-target="o-option__blank">選項按鈕</div>
 					</label>
 				</div>
 			</div>
@@ -332,11 +335,11 @@
 	</div>
 	<div class="l-wrap">
 		<div class="o-checkbox">
-			<input type="checkbox" class="o-checkbox__input" name="option_UNINUM" id="option_UNINUM" data-GUI-target="option_UNINUM" value="">
-			<label class="o-checkbox__tex" for="option_UNINUM">需要開統一編號</label>
+			<input type="checkbox" class="o-checkbox__input" name="option_GUI" id="option_GUI" data-gui-target="option_GUI" value="">
+			<label class="o-checkbox__tex" for="option_GUI">需要開統一編號</label>
 		</div>
 		<!-- 統一編號 -->
-		<form class="l-form mrBSetion" data-GUI-id="option_UNINUM">
+		<form class="l-form mrBSetion" data-gui-id="option_GUI">
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xl">
 					<input type="text" placeholder="公司名稱">
@@ -375,7 +378,7 @@
 				</div>
 			</div>
 		</form>
-		<div class="o-checkbox error">
+		<div class="o-checkbox">
 			<input type="checkbox" class="o-checkbox__input" name="option_return" id="option_return" value="">
 			<label class="o-checkbox__tex" for="option_return">我同意辦理退貨時，由 BEMO 代為處理電子發票及銷貨退回折讓單以加速退款作業。</label>
 		</div>
