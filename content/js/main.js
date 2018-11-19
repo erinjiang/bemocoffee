@@ -55,38 +55,57 @@ $(function() {
 	}).trigger('change');
 
 	// 統一編號表單
-	$('[data-option-target]').on('change', function(e) {
-		var target = $('[data-option-target]:checked').data('option-target');
-		$('[data-option-id]').hide();
-		$('[data-option-id="' + target + '"]').show();
+	$('[data-GUI-target]').on('change', function(e) {
+		var target = $('[data-GUI-target]:checked').data('GUI-target');
+		$('[data-GUI-id]').hide();
+		$('[data-GUI-id="' + target + '"]').show();
 		console.log(target);
 	}).trigger('change');
 
-	// 隱藏錯誤提示 {
-	// 下拉選單
-	$('.transformSelect').on('click', function(e){
-		$(this).siblings('.o-error--text').hide();
-		$(this).parent('.o-select__form').removeClass('error');
-	});
-	// 輸入
-	$(':input').on('click', function(e){
-		$(this).siblings('.o-error--text').hide();
+	// 隱藏錯誤提示
+	$('[data-error-target]').on('click', function(e) {
+		var target = $(this).data('error-target');
+		$('[data-error-id="' + target + '"]').hide();
 		$(this).removeClass('error');
-	});
-	// 另開按鈕
-	$('.o-option__btn').on('click', function(e){
-		$(this).siblings('.o-error--text').hide();
-		$(this).removeClass('error');
-	});
+		console.log(target);
+	}).trigger('change');
+
 	// radio BTN
 	$('.o-radio__tex').on('click', function(e){
 		$(this).parent().removeClass('error');
 		$(this).parent().siblings().removeClass('error');
 	});
+
 	// checkbox BTN
 	$('.o-checkbox__tex').on('click', function(e){
 		$(this).parent().removeClass('error');
 		$(this).parent().siblings().removeClass('error');
 	});
+
+	// $('.transformSelect').on('click', function(e){
+	// 	$(this).siblings('.o-error--text').hide();
+	// 	$(this).parent('.o-select__form').removeClass('error');
+	// });
+	// // 輸入
+	// $(':input').on('click', function(e){
+	// 	$(this).siblings('.o-error--text').hide();
+	// 	$(this).removeClass('error');
+	// });
+	// // 另開按鈕
+	// $('.o-option__btn').on('click', function(e){
+	// 	$(this).siblings('.o-error--text').hide();
+	// 	$(this).removeClass('error');
+	// });
+	// // radio BTN
+	// $('.o-radio__tex').on('click', function(e){
+	// 	$(this).parent().removeClass('error');
+	// 	$(this).parent().siblings().removeClass('error');
+	// });
+	// // checkbox BTN
+	// $('.o-checkbox__tex').on('click', function(e){
+	// 	$(this).parent().removeClass('error');
+	// 	$(this).parent().siblings().removeClass('error');
+	// });
+
 });
 

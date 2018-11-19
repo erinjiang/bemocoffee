@@ -83,7 +83,6 @@
 @media screen and (max-width:599px) {
 	/*-- 輸入表單 --*/
 	.l-form {
-		margin-bottom:30px;
 		&:last-child {
 			margin-bottom:0;
 		}
@@ -122,7 +121,6 @@
 	}
 	/*-- 輸入表單 --*/
 	.l-form {
-		margin-bottom:50px;
 		&:last-child {
 			margin-bottom:0;
 		}
@@ -137,10 +135,6 @@
 	}
 	/*-- 輸入表單 --*/
 	.l-form {
-		&:last-child {
-			margin-bottom:0;
-		}
-		margin-bottom:50px;
 		&__row {
 			// 最後一列
 			&:last-child {

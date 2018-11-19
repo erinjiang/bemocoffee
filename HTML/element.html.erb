@@ -21,7 +21,7 @@
 		<form class="l-form">
 			<div class="l-form__row">
 				<div class="l-form__content">
-					<div class="o-radio error">
+					<div class="o-radio error" data-error-target="error_format_09">
 						<input type="radio" name="option" value="1" id="radio1" class="o-radio__input">
 						<label class="o-radio__tex" for="radio1">選項一</label>	
 					</div>
@@ -39,7 +39,7 @@
 		<form class="l-form">
 			<div class="l-form__row">
 				<div class="l-form__content">
-					<div class="o-checkbox error">
+					<div class="o-checkbox error" data-error-target="error_format_08">
 						<input type="checkbox" name="option" value="1" id="checkbox1" class="o-checkbox__input">
 						<label class="o-checkbox__tex" for="checkbox1">選項一</label>
 					</div>
@@ -234,17 +234,15 @@
 		<form class="l-form">
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xl">
-					<input class="error" type="text" placeholder="中文姓名">
-					<span class="o-error--text">錯誤訊息</span>
+					<input class="error" type="text" placeholder="中文姓名" data-error-target="error_format_01">
 				</div>
 				<div class="l-form__content col-xl">
-					<input class="error" type="tel" placeholder="手機號碼">
-					<span class="o-error--text">錯誤訊息</span>
+					<input class="error" type="tel" placeholder="手機號碼" data-error-target="error_format_02">
 				</div>
 			</div>
 			<div class="l-form__row grid">
 				<div class="l-form__content col-md">
-					<div class="o-select__form error">
+					<div class="o-select__form error" data-error-target="error_format_03">
 						<select class="select selectSalary">
 							<option value="1">請選擇</option>
 							<option value="2">選項二</option>
@@ -256,7 +254,7 @@
 					</div>
 				</div>
 				<div class="l-form__content col-md">
-					<div class="o-select__form error">
+					<div class="o-select__form error" data-error-target="error_format_04">
 						<select class="select selectSalary">
 							<option value="1">請選擇</option>
 							<option value="2">選項二</option>
@@ -265,29 +263,32 @@
 							<option value="5">選項五</option>
 							<option value="6">選項六</option>
 						</select>
-						<span class="o-error--text">錯誤訊息</span>
 					</div>
 				</div>
 				<div class="l-form__content col-xl">
-					<input class="error" type="text" placeholder="收件地址">
-					<span class="o-error--text">錯誤訊息</span>
+					<input class="error" type="text" placeholder="收件地址" data-error-target="error_format_05">
 				</div>
 			</div>
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xxl">
-					<input class="error" type="tel" placeholder="電話輸入框">
-					<span class="o-error--text">錯誤訊息</span>
+					<input class="error" type="tel" placeholder="電話輸入框" data-error-target="error_format_06">
 				</div>
 			</div>
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xxl">
 					<label>
-						<div class="o-option__btn error">另開選項按鈕</div>
-						<span class="o-error--text">錯誤訊息</span>
+						<div class="o-option__btn error" data-error-target="error_format_07">另開選項按鈕</div>
 					</label>
 				</div>
 			</div>
 		</form>
+		<span class="o-error--MSG" data-error-id="error_format_01">請輸入正確姓名</span>
+		<span class="o-error--MSG" data-error-id="error_format_02">手機號碼格式錯誤</span>
+		<span class="o-error--MSG" data-error-id="error_format_03">請選擇縣市</span>
+		<span class="o-error--MSG" data-error-id="error_format_04">請選擇地區</span>
+		<span class="o-error--MSG" data-error-id="error_format_05">收件地址格式錯誤</span>
+		<span class="o-error--MSG" data-error-id="error_format_06">聯絡電話格式錯誤</span>
+		<span class="o-error--MSG" data-error-id="error_format_07">另開選項錯誤訊息</span>
 	</div>
 	<div class="l-wrap">
 		<H4 class="t-section t4">按鈕</H4>
@@ -328,6 +329,56 @@
 				</div>
 			</div>
 		</form>
+	</div>
+	<div class="l-wrap">
+		<div class="o-checkbox">
+			<input type="checkbox" class="o-checkbox__input" name="option_UNINUM" id="option_UNINUM" data-GUI-target="option_UNINUM" value="">
+			<label class="o-checkbox__tex" for="option_UNINUM">需要開統一編號</label>
+		</div>
+		<!-- 統一編號 -->
+		<form class="l-form mrBSetion" data-GUI-id="option_UNINUM">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xl">
+					<input type="text" placeholder="公司名稱">
+				</div>
+				<div class="l-form__content col-xl">
+					<input type="tel" placeholder="統一編號">
+				</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content col-md">
+					<div class="o-select__form">
+						<select class="select selectSalary">
+							<option value="1">請選擇縣市</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__content col-md">
+					<div class="o-select__form">
+						<select class="select selectSalary">
+							<option value="1">請選擇</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__content col-xl">
+					<input type="text" placeholder="詳細地址">
+				</div>
+			</div>
+		</form>
+		<div class="o-checkbox error">
+			<input type="checkbox" class="o-checkbox__input" name="option_return" id="option_return" value="">
+			<label class="o-checkbox__tex" for="option_return">我同意辦理退貨時，由 BEMO 代為處理電子發票及銷貨退回折讓單以加速退款作業。</label>
+		</div>
 	</div>
 	<div class="l-wrap">
 		<H4 class="t-section t4">Grid 設定</H4>

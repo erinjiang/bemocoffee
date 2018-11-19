@@ -25,7 +25,7 @@ input[type=text], [type=password], [type=email], [type=tel] {
 }
 
 /* line 26, ../sass/_extend.scss */
-.o-checkbox__tex:before {
+.o-checkbox__tex:before, .o-error--MSG {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -o-border-radius: 3px;
@@ -560,30 +560,31 @@ button:focus {
   left: 0;
   bottom: 0;
   width: 100%;
+  z-index: 1;
 }
-/* line 502, ../sass/element.scss */
+/* line 503, ../sass/element.scss */
 .o-docking__bottom {
   background: #FFFFFF;
   width: 100%;
   padding-top: 10px;
   overflow: hidden;
 }
-/* line 510, ../sass/element.scss */
+/* line 511, ../sass/element.scss */
 .o-docking .c-order__sum {
   padding-bottom: 10px;
   border-bottom: #CCCCCC 1px solid;
 }
-/* line 517, ../sass/element.scss */
+/* line 518, ../sass/element.scss */
 .o-docking .c-button__column--one .c-button__large {
   width: 100%;
 }
-/* line 522, ../sass/element.scss */
+/* line 523, ../sass/element.scss */
 .o-docking .c-button__column--two .c-button__large {
   flex: 1 1 auto;
 }
 
-/* line 529, ../sass/element.scss */
-.o-error--text {
+/* line 531, ../sass/element.scss */
+.o-error--tex {
   background-color: #FFE7EA;
   position: absolute;
   color: #D0021B;
@@ -593,31 +594,41 @@ button:focus {
   left: 14px;
   bottom: -10px;
 }
+/* line 541, ../sass/element.scss */
+.o-error--MSG {
+  background-color: #FFE7EA;
+  color: #D0021B;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  padding: 5px 14px;
+  margin-top: 5px;
+}
 
 /*-------------------------------------------------------------- mobile --------------------------------------------------------------*/
 @media screen and (max-width: 599px) {
   /*------------------------- 按鈕 -------------------------*/
-  /* line 546, ../sass/element.scss */
+  /* line 558, ../sass/element.scss */
   .c-button__column--one {
     width: 100%;
   }
-  /* line 548, ../sass/element.scss */
+  /* line 560, ../sass/element.scss */
   .c-button__column--one .c-button__large {
     width: 100%;
   }
-  /* line 552, ../sass/element.scss */
+  /* line 564, ../sass/element.scss */
   .c-button__column--two {
     width: 100%;
   }
-  /* line 554, ../sass/element.scss */
+  /* line 566, ../sass/element.scss */
   .c-button__column--two .c-button__large {
     flex: 1 1 auto;
   }
-  /* line 556, ../sass/element.scss */
+  /* line 568, ../sass/element.scss */
   .c-button__column--two .c-button__large:first-child {
     margin-right: 7px;
   }
-  /* line 559, ../sass/element.scss */
+  /* line 571, ../sass/element.scss */
   .c-button__column--two .c-button__large:last-child {
     margin-left: 7px;
   }
@@ -625,27 +636,27 @@ button:focus {
 /*-------------------------------------------------------------- tablet --------------------------------------------------------------*/
 @media screen and (min-width: 600px) and (max-width: 1023px) {
   /*------------------------- 按鈕 -------------------------*/
-  /* line 572, ../sass/element.scss */
+  /* line 584, ../sass/element.scss */
   .c-button__column--one {
     width: 100%;
   }
-  /* line 574, ../sass/element.scss */
+  /* line 586, ../sass/element.scss */
   .c-button__column--one .c-button__large {
     width: 220px;
   }
-  /* line 578, ../sass/element.scss */
+  /* line 590, ../sass/element.scss */
   .c-button__column--two {
     width: 100%;
   }
-  /* line 580, ../sass/element.scss */
+  /* line 592, ../sass/element.scss */
   .c-button__column--two .c-button__large {
     width: 220px;
   }
-  /* line 582, ../sass/element.scss */
+  /* line 594, ../sass/element.scss */
   .c-button__column--two .c-button__large:first-child {
     margin-right: 10px;
   }
-  /* line 585, ../sass/element.scss */
+  /* line 597, ../sass/element.scss */
   .c-button__column--two .c-button__large:last-child {
     margin-left: 10px;
   }
@@ -653,27 +664,27 @@ button:focus {
 /*-------------------------------------------------------------- pc --------------------------------------------------------------*/
 @media screen and (min-width: 1024px) {
   /*------------------------- 按鈕 -------------------------*/
-  /* line 598, ../sass/element.scss */
+  /* line 610, ../sass/element.scss */
   .c-button__column--one {
     width: 100%;
   }
-  /* line 600, ../sass/element.scss */
+  /* line 612, ../sass/element.scss */
   .c-button__column--one .c-button__large {
     width: 220px;
   }
-  /* line 604, ../sass/element.scss */
+  /* line 616, ../sass/element.scss */
   .c-button__column--two {
     width: 100%;
   }
-  /* line 606, ../sass/element.scss */
+  /* line 618, ../sass/element.scss */
   .c-button__column--two .c-button__large {
     width: 220px;
   }
-  /* line 608, ../sass/element.scss */
+  /* line 620, ../sass/element.scss */
   .c-button__column--two .c-button__large:first-child {
     margin-right: 10px;
   }
-  /* line 611, ../sass/element.scss */
+  /* line 623, ../sass/element.scss */
   .c-button__column--two .c-button__large:last-child {
     margin-left: 10px;
   }
