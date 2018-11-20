@@ -21,8 +21,8 @@ $(function() {
 		}
 	});
 
-
-	// 付款方式應對表單
+	// 表單Show / Hide
+	//	付款方式應對表單
 	$('[data-change-target]').on('change', function(e) {
 		var target = $('[data-change-target]:checked').data('change-target');
 		$('[data-change-id]').hide();
@@ -30,7 +30,7 @@ $(function() {
 		console.log(target);
 	}).trigger('change');
 
-	// 統一編號表單
+	//	統一編號表單
 	$('[data-gui-target]').on('change', function(e) {
 		var target = $('[data-gui-target]:checked').data('gui-target');
 		$('[data-gui-id]').hide();
@@ -40,11 +40,14 @@ $(function() {
 
 	// 如果頁面有docling bottom，將頁面的padding-bottom加上docling bottom得高
 	if($('.site-content').hasClass('l-docking')){
-		var height = $('.o-docking__bottom').height();
-		var contentPDB = $('.site-content').css('padding-bottom');
-		var padding = height - 50;
-		$('.l-docking').css('padding-bottom', height);
-		console.log(padding);
+		// get docking's height
+		var height = $('.o-docking__bottom').outerHeight();
+		// get footer's height
+		var footer = $('.site-footer').outerHeight();
+		// set padding equal docking's height minus footer's height
+		var padding = height - footer;
+		$('.l-docking').css('padding-bottom', padding);
+		console.log(height,footer,padding);
 	};
 
 });

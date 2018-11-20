@@ -9,6 +9,10 @@
 	background:$u-color-white;
 	border:$-u-border-black;
 	@extend %-u-border-radius-s;
+	margin-bottom:20px;
+	&:last-child {
+		margin-bottom:0px;
+	}
 	&__row {
 		// 最後一列
 		&:last-child {
@@ -83,9 +87,6 @@
 @media screen and (max-width:599px) {
 	/*-- 輸入表單 --*/
 	.l-form {
-		&:last-child {
-			margin-bottom:0;
-		}
 		&__row {
 			// 最後一列
 			&:last-child {
@@ -118,12 +119,6 @@
 @media screen and (min-width:600px) and (max-width:1023px) {
 	.l-wrap {
 		width:580px;
-	}
-	/*-- 輸入表單 --*/
-	.l-form {
-		&:last-child {
-			margin-bottom:0;
-		}
 	}
 }
 

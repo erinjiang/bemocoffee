@@ -38,6 +38,7 @@
 
 p {
 	font-size:$-u-font-size-general;
+	margin-bottom:20px;
 }
 
 .smallFont {
@@ -63,6 +64,9 @@ p {
 .o-radio, .o-checkbox {
 	position:relative;
 	padding-bottom:10px;
+	&:last-child {
+		padding-bottom:0px;
+	}
 	&__input {
 		position:absolute;
 		opacity:0;
@@ -223,7 +227,7 @@ input:focus {
 			position:relative;
 			@extend %-u-boxsizing;
 			border-bottom:$-u-border-mediumgrey;
-			span {
+			span, input[type=text] {
 				line-height:$lineHeight;
 				display:block;
 				height:50px;
@@ -243,8 +247,6 @@ input:focus {
 	  				background-repeat: no-repeat;
 					background-size: 16px;
 				}
-			}
-			input[type=text] {
 			}
 			ul {
 				position:absolute;

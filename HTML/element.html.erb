@@ -16,78 +16,246 @@
 		<span class="smallFont">Header 6</span><H6 class="t6">Give this quartet a few</H6>
 		<span class="smallFont">Paragraph</span><p>段落文字，段落文字，段落文字，段落文字，段落文字，段落文字，段落文字，段落文字，段落文字。段落文字，段落文字，段落文字，段落文字，段落文字，段落文字，段落文字，段落文字，段落文字。段落文字，段落文字，段落文字，段落文字，段落文字，段落文字，段落文字，段落文字，段落文字。段落文字，段落文字，段落文字，段落文字，段落文字，段落文字，段落文字，段落文字，段落文字。段落文字，段落文字，段落文字，段落文字，段落文字，段落文字，段落文字，段落文字，段落文字。</p>
 	</div>
+	<!-- 單選 -->
 	<div class="l-wrap">
-		<H4 class="t-section t4">選項</H4>
+		<H4 class="t-section t4">單選</H4>
+		<H5 class="t-section t5">在表格內</H5>
 		<form class="l-form">
-			<div class="l-form__row">
-				<div class="l-form__content">
-					<div class="o-radio error" data-error-target="error_format_09">
-						<input type="radio" name="option" value="1" id="radio1" class="o-radio__input">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xxl">
+					<div class="o-radio">
+						<input type="radio" name="option" value="" id="radio1" class="o-radio__input">
 						<label class="o-radio__tex" for="radio1">選項一</label>	
 					</div>
 					<div class="o-radio">
-						<input type="radio" name="option" value="1" id="radio2" class="o-radio__input">
+						<input type="radio" name="option" value="" id="radio2" class="o-radio__input">
 						<label class="o-radio__tex" for="radio2">選項一</label>
 					</div>
 					<div class="o-radio">
-						<input type="radio" name="option" value="1" id="radio3" class="o-radio__input">
+						<input type="radio" name="option" value="" id="radio3" class="o-radio__input">
 						<label class="o-radio__tex" for="radio3">選項一</label>
 					</div>
 				</div>
 			</div>
 		</form>
 		<form class="l-form">
-			<div class="l-form__row">
-				<div class="l-form__content">
-					<div class="o-checkbox error" data-error-target="error_format_08">
-						<input type="checkbox" name="option" value="1" id="checkbox1" class="o-checkbox__input">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xxl">
+					<div class="o-radio error">
+						<input type="radio" name="option" value="" id="radio_error_1" class="o-radio__input">
+						<label class="o-radio__tex" for="radio_error_1">選項一</label>	
+					</div>
+					<div class="o-radio error">
+						<input type="radio" name="option" value="" id="radio_error_2" class="o-radio__input">
+						<label class="o-radio__tex" for="radio_error_2">選項一</label>
+					</div>
+					<div class="o-radio error">
+						<input type="radio" name="option" value="" id="radio_error_3" class="o-radio__input">
+						<label class="o-radio__tex" for="radio_error_3">選項一</label>
+					</div>
+				</div>
+			</div>
+		</form>
+		<div class="o-radio">
+			<input type="radio" name="option" value="" id="radio_without_1" class="o-radio__input">
+			<label class="o-radio__tex" for="radio_without_1">選項選項選項選項選項選項選項</label>
+		</div>
+		<div class="o-radio">
+			<input type="radio" name="option" value="" id="radio_without_2" class="o-radio__input">
+			<label class="o-radio__tex" for="radio_without_2">選項選項選項選項選項選項選項</label>
+		</div>
+		<div class="o-radio error">
+			<input type="radio" name="option" value="" id="radio_without_error_1" class="o-radio__input">
+			<label class="o-radio__tex" for="radio_without_error_1">選項選項選項選項選項選項選項</label>
+		</div>
+		<div class="o-radio error">
+			<input type="radio" name="option" value="" id="radio_without_error_2" class="o-radio__input">
+			<label class="o-radio__tex" for="radio_without_error_2">選項選項選項選項選項選項選項</label>
+		</div>
+		<p class="smallFont">當有選項有錯誤時，在 ＜div class="o-radio"＞＜/div＞ 的 class 加上 error</p>
+	</div>
+	<!-- 複選 -->
+	<div class="l-wrap">
+		<H4 class="t-section t4">複選</H4>
+		<H5 class="t-section t5">在表格內</H5>
+		<form class="l-form">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xxl">
+					<div class="o-checkbox">
+						<input type="checkbox" name="option" value="" id="checkbox1" class="o-checkbox__input">
 						<label class="o-checkbox__tex" for="checkbox1">選項一</label>
 					</div>
 					<div class="o-checkbox">
-						<input type="checkbox" name="option" value="1" id="checkbox2" class="o-checkbox__input">
+						<input type="checkbox" name="option" value="" id="checkbox2" class="o-checkbox__input">
 						<label class="o-checkbox__tex" for="checkbox2">選項二</label>
 					</div>
 					<div class="o-checkbox">
-						<input type="checkbox" name="option" value="1" id="checkbox3" class="o-checkbox__input">
+						<input type="checkbox" name="option" value="" id="checkbox3" class="o-checkbox__input">
 						<label class="o-checkbox__tex" for="checkbox3">選項三</label>
 					</div>
 				</div>
 			</div>
 		</form>
+		<form class="l-form">
+			<div class="l-form__row gird">
+				<div class="l-form__content col-xxl">
+					<div class="o-checkbox error">
+						<input type="checkbox" name="option" value="1" id="checkbox_error_1" class="o-checkbox__input">
+						<label class="o-checkbox__tex" for="checkbox_error_1">選項一</label>
+					</div>
+					<div class="o-checkbox error">
+						<input type="checkbox" name="option" value="1" id="checkbox_error_2" class="o-checkbox__input">
+						<label class="o-checkbox__tex" for="checkbox_error_2">選項二</label>
+					</div>
+					<div class="o-checkbox error">
+						<input type="checkbox" name="option" value="1" id="checkbox_error_3" class="o-checkbox__input">
+						<label class="o-checkbox__tex" for="checkbox_error_3">選項三</label>
+					</div>
+				</div>
+			</div>
+		</form>
+		<H5 class="t-section t5">沒有表格</H5>
+		<div class="o-checkbox">
+			<input type="checkbox" name="option_without_01" id="option_without_01" class="o-checkbox__input">
+			<label class="o-checkbox__tex" for="option_without_01">選項選項選項選項選項選項選項</label>
+		</div>
+		<div class="o-checkbox">
+			<input type="checkbox" name="option_without_02" id="option_without_02" class="o-checkbox__input">
+			<label class="o-checkbox__tex" for="option_without_02">選項選項選項選項選項選項選項</label>
+		</div>
+		<div class="o-checkbox error">
+			<input type="checkbox" name="option_without_error_01" id="option_without_error_01" class="o-checkbox__input">
+			<label class="o-checkbox__tex" for="option_without_error_01">選項選項選項選項選項選項選項</label>
+		</div>
+		<div class="o-checkbox error">
+			<input type="checkbox" name="option_without_error_02" id="option_without_error_02" class="o-checkbox__input">
+			<label class="o-checkbox__tex" for="option_without_error_02">選項選項選項選項選項選項選項</label>
+		</div>
+		<p class="smallFont">當有選項有錯誤時，在 ＜div class="o-checkbox"＞＜/div＞ 的 class 加上 error</p>
 	</div>
+	<!-- 輸入框 -->
 	<div class="l-wrap">
 		<H4 class="t-section t4">輸入框</H4>
 		<form class="l-form">
-			<div class="l-form__row">
-				<div class="l-form__content">
-					<input type="text" placeholder="文字輸入框">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xs">
+					<input type="text" placeholder="col-xs">
+				</div>
+				<div class="l-form__content col-xs">
+					<input type="text" placeholder="col-xs">
+				</div>
+				<div class="l-form__content col-xs">
+					<input type="text" placeholder="col-xs">
+				</div>
+				<div class="l-form__content col-xs">
+					<input type="text" placeholder="col-xs">
+				</div>
+				<div class="l-form__content col-xs">
+					<input type="text" placeholder="col-xs">
+				</div>
+				<div class="l-form__content col-xs">
+					<input type="text" placeholder="col-xs">
 				</div>
 			</div>
-			<div class="l-form__row">
-				<div class="l-form__content">
-					<input type="password" placeholder="密碼輸入框">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-md">
+					<input type="text" placeholder="col-md">
+				</div>
+				<div class="l-form__content col-md">
+					<input type="text" placeholder="col-md">
+				</div>
+				<div class="l-form__content col-md">
+					<input type="text" placeholder="col-md">
+				</div>
+				<div class="l-form__content col-md">
+					<input type="text" placeholder="col-md">
 				</div>
 			</div>
-			<div class="l-form__row">
-				<div class="l-form__content">
-					<input type="email" placeholder="E-mail輸入框">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-lg">
+					<input type="text" placeholder="col-lg">
+				</div>
+				<div class="l-form__content col-lg">
+					<input type="text" placeholder="col-lg">
 				</div>
 			</div>
-			<div class="l-form__row">
-				<div class="l-form__content">
-					<input type="tel" placeholder="電話輸入框">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xl">
+					<input type="text" placeholder="col-xl">
+				</div>
+				<div class="l-form__content col-xl">
+					<input type="text" placeholder="col-xl">
+				</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xxl">
+					<input type="text" placeholder="col-xxl">
 				</div>
 			</div>
 		</form>
+		<form class="l-form">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-lg">
+					<input type="text" placeholder="col-lg" class="error">
+				</div>
+				<div class="l-form__content col-lg">
+					<input type="text" placeholder="col-lg" class="error">
+				</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xxl">
+					<input type="text" placeholder="col-xxl" class="error">
+				</div>
+			</div>
+		</form>
+		<span class="o-error--MSG">錯誤訊息</span>
+		<p class="smallFont">當有輸入有錯誤時，在 ＜input＞ 加上 class="error"</p>
 	</div>
+	<!-- 下拉選單 -->
 	<div class="l-wrap">
 		<H4 class="t-section t4">下拉選單</H4>
 		<form class="l-form">
-			<div class="l-form__row">
-				<div class="l-form__content">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-md">
 					<div class="o-select__form">
 						<select class="select selectSalary">
-							<option value="1">請選擇</option>
+							<option value="1">col-md</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__content col-md">
+					<div class="o-select__form">
+						<select class="select selectSalary">
+							<option value="1">col-md</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__content col-md">
+					<div class="o-select__form">
+						<select class="select selectSalary">
+							<option value="1">col-md</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__content col-md">
+					<div class="o-select__form">
+						<select class="select selectSalary">
+							<option value="1">col-md</option>
 							<option value="2">選項二</option>
 							<option value="3">選項三</option>
 							<option value="4">選項四</option>
@@ -97,11 +265,23 @@
 					</div>
 				</div>
 			</div>
-			<div class="l-form__row">
-				<div class="l-form__content">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-lg">
 					<div class="o-select__form">
 						<select class="select selectSalary">
-							<option value="1">請選擇</option>
+							<option value="1">col-lg</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__content col-lg">
+					<div class="o-select__form">
+						<select class="select selectSalary">
+							<option value="1">col-lg</option>
 							<option value="2">選項二</option>
 							<option value="3">選項三</option>
 							<option value="4">選項四</option>
@@ -111,11 +291,23 @@
 					</div>
 				</div>
 			</div>
-			<div class="l-form__row">
-				<div class="l-form__content">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-lg">
 					<div class="o-select__form">
 						<select class="select selectSalary">
-							<option value="1">請選擇</option>
+							<option value="1">col-lg</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__content col-lg">
+					<div class="o-select__form">
+						<select class="select selectSalary">
+							<option value="1">col-lg</option>
 							<option value="2">選項二</option>
 							<option value="3">選項三</option>
 							<option value="4">選項四</option>
@@ -125,11 +317,23 @@
 					</div>
 				</div>
 			</div>
-			<div class="l-form__row">
-				<div class="l-form__content">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xl">
 					<div class="o-select__form">
 						<select class="select selectSalary">
-							<option value="1">請選擇</option>
+							<option value="1">col-xl</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__content col-xl">
+					<div class="o-select__form">
+						<select class="select selectSalary">
+							<option value="1">col-xl</option>
 							<option value="2">選項二</option>
 							<option value="3">選項三</option>
 							<option value="4">選項四</option>
@@ -139,11 +343,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="l-form__row">
-				<div class="l-form__content">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xxl">
 					<div class="o-select__form">
 						<select class="select selectSalary">
-							<option value="1">請選擇</option>
+							<option value="1">col-xxl</option>
 							<option value="2">選項二</option>
 							<option value="3">選項三</option>
 							<option value="4">選項四</option>
@@ -154,32 +358,239 @@
 				</div>
 			</div>
 		</form>
-	</div>
-	<div class="l-wrap">
-		<H4 class="t-section t4">另開選項</H4>
-		<H3 class="t-section t4">一般狀態</H3>
 		<form class="l-form">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-md">
+					<div class="o-select__form error">
+						<select class="select selectSalary">
+							<option value="1">col-md</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__content col-md">
+					<div class="o-select__form error">
+						<select class="select selectSalary">
+							<option value="1">col-md</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__content col-md">
+					<div class="o-select__form error">
+						<select class="select selectSalary">
+							<option value="1">col-md</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__content col-md">
+					<div class="o-select__form error">
+						<select class="select selectSalary">
+							<option value="1">col-md</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content col-lg">
+					<div class="o-select__form error">
+						<select class="select selectSalary">
+							<option value="1">col-lg</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__content col-lg">
+					<div class="o-select__form error">
+						<select class="select selectSalary">
+							<option value="1">col-lg</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content col-lg">
+					<div class="o-select__form error">
+						<select class="select selectSalary">
+							<option value="1">col-lg</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__content col-lg">
+					<div class="o-select__form error">
+						<select class="select selectSalary">
+							<option value="1">col-lg</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xl">
+					<div class="o-select__form error">
+						<select class="select selectSalary">
+							<option value="1">col-xl</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__content col-xl">
+					<div class="o-select__form error">
+						<select class="select selectSalary">
+							<option value="1">col-xl</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xxl">
+					<div class="o-select__form error">
+						<select class="select selectSalary">
+							<option value="1">col-xxl</option>
+							<option value="2">選項二</option>
+							<option value="3">選項三</option>
+							<option value="4">選項四</option>
+							<option value="5">選項五</option>
+							<option value="6">選項六</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</form>
+		<span class="o-error--MSG">錯誤訊息</span>
+		<p class="smallFont">當下拉選單有錯的時候，在 ＜div class="o-select__form"＞＜/div＞ 的 class，再加上 error。</p>
+	</div>
+	<!-- 另開選項 BTN -->
+	<div class="l-wrap">
+		<H4 class="t-section t4">另開選項 BTN</H4>
+		<p>使用在另開頁面做選項，例如：結帳頁面的，選取貨便利商店。</p>
+		<H5 class="t-section t5">一般狀態</H5>
+		<form class="l-form">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-md">
+					<label class="o-option">
+						<div class="o-option__btn">col-md</div>
+					</label>
+				</div>
+				<div class="l-form__content col-md">
+					<label class="o-option">
+						<div class="o-option__btn">col-md</div>
+					</label>
+				</div>
+				<div class="l-form__content col-md">
+					<label class="o-option">
+						<div class="o-option__btn">col-md</div>
+					</label>
+				</div>
+				<div class="l-form__content col-md">
+					<label class="o-option">
+						<div class="o-option__btn">col-md</div>
+					</label>
+				</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content col-lg">
+					<label class="o-option">
+						<div class="o-option__btn">col-lg</div>
+					</label>
+				</div>
+				<div class="l-form__content col-lg">
+					<label class="o-option">
+						<div class="o-option__btn">col-lg</div>
+					</label>
+				</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xl">
+					<label class="o-option">
+						<div class="o-option__btn">col-xl</div>
+					</label>
+				</div>
+				<div class="l-form__content col-xl">
+					<label class="o-option">
+						<div class="o-option__btn">col-xl</div>
+					</label>
+				</div>
+			</div>
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xxl">
 					<label class="o-option">
-						<div class="o-option__btn" data-blank-target="o-option__blank">選項按鈕</div>
+						<div class="o-option__btn">col-xxl</div>
 					</label>
 				</div>
 			</div>
 		</form>
-		<H3 class="t-section t4">有值帶入後</H3>
+		<H5 class="t-section t5">有值帶入後</H5>
 		<form class="l-form">
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xxl">
 					<label class="o-option">
-						<div class="o-option__btn active" data-blank-target="o-option__blank">選項按鈕</div>
+						<div class="o-option__btn active">選項按鈕</div>
 					</label>
 				</div>
 			</div>
 		</form>
+		<p class="smallFont">當按鈕有值帶入後，在 ＜div class="o-option__btn"＞＜/div＞ 的 class，再加上 active。</p>
+		<H5 class="t-section t5">錯誤狀態</H5>
+		<form class="l-form">
+			<div class="l-form__row grid">
+				<div class="l-form__content col-xxl">
+					<label class="o-option">
+						<div class="o-option__btn error">選項按鈕</div>
+					</label>
+				</div>
+			</div>
+		</form>
+		<span class="o-error--MSG">錯誤訊息</span>
+		<p class="smallFont">當按鈕有值帶入後，在 ＜div class="o-option__btn"＞＜/div＞ 的 class，再加上 error。</p>
 	</div>
 	<div class="l-wrap">
-		<H4 class="t-section t4">表單</H4>
+		<H4 class="t-section t4">表單示意</H4>
 		<form class="l-form">
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xl">
@@ -231,21 +642,18 @@
 				</div>
 			</div>
 		</form>
-	</div>
-	<div class="l-wrap">
-		<H4 class="t-section t4">表單 錯誤</H4>
 		<form class="l-form">
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xl">
-					<input class="error" type="text" placeholder="中文姓名" data-error-target="error_format_01">
+					<input class="error" type="text" placeholder="中文姓名">
 				</div>
 				<div class="l-form__content col-xl">
-					<input class="error" type="tel" placeholder="手機號碼" data-error-target="error_format_02">
+					<input class="error" type="tel" placeholder="手機號碼">
 				</div>
 			</div>
 			<div class="l-form__row grid">
 				<div class="l-form__content col-md">
-					<div class="o-select__form error" data-error-target="error_format_03">
+					<div class="o-select__form error">
 						<select class="select selectSalary">
 							<option value="1">請選擇</option>
 							<option value="2">選項二</option>
@@ -257,7 +665,7 @@
 					</div>
 				</div>
 				<div class="l-form__content col-md">
-					<div class="o-select__form error" data-error-target="error_format_04">
+					<div class="o-select__form error">
 						<select class="select selectSalary">
 							<option value="1">請選擇</option>
 							<option value="2">選項二</option>
@@ -269,32 +677,33 @@
 					</div>
 				</div>
 				<div class="l-form__content col-xl">
-					<input class="error" type="text" placeholder="收件地址" data-error-target="error_format_05">
+					<input class="error" type="text" placeholder="收件地址">
 				</div>
 			</div>
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xxl">
-					<input class="error" type="tel" placeholder="電話輸入框" data-error-target="error_format_06">
+					<input class="error" type="tel" placeholder="電話輸入框">
 				</div>
 			</div>
 			<div class="l-form__row grid">
 				<div class="l-form__content col-xxl">
 					<label>
-						<div class="o-option__btn error" data-error-target="error_format_07">另開選項按鈕</div>
+						<div class="o-option__btn error">另開選項按鈕</div>
 					</label>
 				</div>
 			</div>
 		</form>
-		<span class="o-error--MSG" data-error-id="error_format_01">請輸入正確姓名</span>
-		<span class="o-error--MSG" data-error-id="error_format_02">手機號碼格式錯誤</span>
-		<span class="o-error--MSG" data-error-id="error_format_03">請選擇縣市</span>
-		<span class="o-error--MSG" data-error-id="error_format_04">請選擇地區</span>
-		<span class="o-error--MSG" data-error-id="error_format_05">收件地址格式錯誤</span>
-		<span class="o-error--MSG" data-error-id="error_format_06">聯絡電話格式錯誤</span>
-		<span class="o-error--MSG" data-error-id="error_format_07">另開選項錯誤訊息</span>
+		<span class="o-error--MSG">請輸入正確姓名</span>
+		<span class="o-error--MSG">手機號碼格式錯誤</span>
+		<span class="o-error--MSG">請選擇縣市</span>
+		<span class="o-error--MSG">請選擇地區</span>
+		<span class="o-error--MSG">收件地址格式錯誤</span>
+		<span class="o-error--MSG">聯絡電話格式錯誤</span>
+		<span class="o-error--MSG">另開選項錯誤訊息</span>
 	</div>
 	<div class="l-wrap">
 		<H4 class="t-section t4">按鈕</H4>
+		<H5 class="t-section t5">大按鈕</H5>
 		<div class="c-button">
 			<div class="c-button__column--one">
 				<button type="submit" class="c-button__main c-button__large">主要按鈕</button>
@@ -316,12 +725,29 @@
 		<H4 class="t-section t4">表單資料</H4>
 		<form class="l-form">
 			<div class="l-form__row grid">
-				<div class="l-form__content--info col-lg">
-					項目內容
-				</div>
-				<div class="l-form__content--info col-lg">
-					項目內容
-				</div>
+				<div class="l-form__content--info col-xs">col-xs</div>
+				<div class="l-form__content--info col-xs">col-xs</div>
+				<div class="l-form__content--info col-xs">col-xs</div>
+				<div class="l-form__content--info col-xs">col-xs</div>
+				<div class="l-form__content--info col-xs">col-xs</div>
+				<div class="l-form__content--info col-xs">col-xs</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content--info col-md">col-md</div>
+				<div class="l-form__content--info col-md">col-md</div>
+				<div class="l-form__content--info col-md">col-md</div>
+				<div class="l-form__content--info col-md">col-md</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content--info col-lg">col-lg</div>
+				<div class="l-form__content--info col-lg">col-lg</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content--info col-xl">col-xl</div>
+				<div class="l-form__content--info col-xl">col-xl</div>
+			</div>
+			<div class="l-form__row grid">
+				<div class="l-form__content--info col-xxl">col-xxl</div>
 			</div>
 			<div class="l-form__row grid">
 				<div class="l-form__content--info col-xxl">
@@ -332,56 +758,6 @@
 				</div>
 			</div>
 		</form>
-	</div>
-	<div class="l-wrap">
-		<div class="o-checkbox">
-			<input type="checkbox" class="o-checkbox__input" name="option_GUI" id="option_GUI" data-gui-target="option_GUI" value="">
-			<label class="o-checkbox__tex" for="option_GUI">需要開統一編號</label>
-		</div>
-		<!-- 統一編號 -->
-		<form class="l-form mrBSetion" data-gui-id="option_GUI">
-			<div class="l-form__row grid">
-				<div class="l-form__content col-xl">
-					<input type="text" placeholder="公司名稱">
-				</div>
-				<div class="l-form__content col-xl">
-					<input type="tel" placeholder="統一編號">
-				</div>
-			</div>
-			<div class="l-form__row grid">
-				<div class="l-form__content col-md">
-					<div class="o-select__form">
-						<select class="select selectSalary">
-							<option value="1">請選擇縣市</option>
-							<option value="2">選項二</option>
-							<option value="3">選項三</option>
-							<option value="4">選項四</option>
-							<option value="5">選項五</option>
-							<option value="6">選項六</option>
-						</select>
-					</div>
-				</div>
-				<div class="l-form__content col-md">
-					<div class="o-select__form">
-						<select class="select selectSalary">
-							<option value="1">請選擇</option>
-							<option value="2">選項二</option>
-							<option value="3">選項三</option>
-							<option value="4">選項四</option>
-							<option value="5">選項五</option>
-							<option value="6">選項六</option>
-						</select>
-					</div>
-				</div>
-				<div class="l-form__content col-xl">
-					<input type="text" placeholder="詳細地址">
-				</div>
-			</div>
-		</form>
-		<div class="o-checkbox">
-			<input type="checkbox" class="o-checkbox__input" name="option_return" id="option_return" value="">
-			<label class="o-checkbox__tex" for="option_return">我同意辦理退貨時，由 BEMO 代為處理電子發票及銷貨退回折讓單以加速退款作業。</label>
-		</div>
 	</div>
 	<div class="l-wrap">
 		<H4 class="t-section t4">Grid 設定</H4>
