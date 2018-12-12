@@ -50,5 +50,20 @@ $(function() {
 		console.log(height,footer,padding);
 	};
 
+	// 訂單詳細 的 訂單狀態 收合
+	$('.c-progress__list').slideUp();
+	$('.c-progress__button').on('click', function(e) {
+		var button = $('.c-progress__button');
+		$(this).children('span').text('最新狀態');
+		$('.c-progress__list').slideToggle();
+		if($(this).hasClass('active')){
+			$(this).removeClass('active');
+			$(this).children('span').text('完整狀態');
+		}else {
+			$(this).addClass('active');
+			$(this).children('span').text('最新狀態');
+		}
+	});
+
 });
 

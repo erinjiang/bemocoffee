@@ -7,43 +7,43 @@
 
 /*------------------------- 字級 -------------------------*/
 .t1 {
-	font-size:$-u-font-size-xxl;
+	font-size:$u-font-size-xxl;
 	font-weight:bold;
 }
 
 .t2 {
-	font-size:$-u-font-size-xl;
+	font-size:$u-font-size-xl;
 	font-weight:bold;
 }
 
 .t3 {
-	font-size:$-u-font-size-l;
+	font-size:$u-font-size-l;
 	font-weight:bold;
 }
 
 .t4 {
-	font-size:$-u-font-size-m;
+	font-size:$u-font-size-m;
 	font-weight:bold;
 }
 
 .t5 {
-	font-size:$-u-font-size-s;
+	font-size:$u-font-size-s;
 	font-weight:bold;
 }
 
 .t6 {
-	font-size:$-u-font-size-general;
+	font-size:$u-font-size-general;
 	font-weight:bold;
 }
 
 p {
-	font-size:$-u-font-size-general;
+	font-size:$u-font-size-general;
 	margin-bottom:20px;
 }
 
 .smallFont {
 	color:$u-color-grey;
-	font-size:$-u-font-size-xs;
+	font-size:$u-font-size-xs;
 }
 
 /*-- 標題 --*/
@@ -75,7 +75,7 @@ p {
 		position:relative;
 		display:block;
 		padding:3px 0 3px 40px;
-		@extend %-u-boxsizing;
+		@extend %u-boxsizing;
 		cursor:pointer;
 		&:before {
 			background-color:$u-color-white;
@@ -86,9 +86,9 @@ p {
 			width:30px;
 			height:30px;
 			margin-right:10px;
-			border:$-u-border-grey;
+			border:$u-border-grey;
 			@extend %u-transform-TLY-50;
-			@extend %-u-boxsizing;
+			@extend %u-boxsizing;
 		}
 	}
 	&__input:checked + &__tex:before {
@@ -97,13 +97,13 @@ p {
 		background-size:30px;
 		background-position:0 0;
 		background-repeat:no-repeat;
-		border:$-u-border-black;
+		border:$u-border-black;
 	}
 	&.error {
 		.o-radio__tex, .o-checkbox__tex {
 			color:$u-color-red;
 			&:before {
-				border:$-u-border-red;
+				border:$u-border-red;
 			}
 		}
 	}
@@ -125,7 +125,7 @@ p {
 .o-checkbox {
 	&__tex {
 		&:before {
-			@extend %-u-border-radius-xs;
+			@extend %u-border-radius-xs;
 		}
 	}
 }
@@ -136,8 +136,8 @@ p {
 	width:100%;
 	color:$u-color-grey;
 	padding:13px 40px 13px 14px;
-	@extend %-u-boxsizing;
-	border-bottom:$-u-border-mediumgrey;
+	@extend %u-boxsizing;
+	border-bottom:$u-border-mediumgrey;
 	cursor:pointer;
 	&:after {
 		content:" ";
@@ -157,7 +157,7 @@ p {
 	}
 	&.error {
 		color:$u-color-red;
-		border-bottom:$-u-border-red;
+		border-bottom:$u-border-red;
 		&:after {
 			background-image: url(../images/icon/arrow/red/right.png);
 		}
@@ -169,19 +169,19 @@ p {
 input[type=text], [type=password], [type=email], [type=tel] {
 	background:transparent;
 	color:$u-color-black;
-	font-size:$-u-font-size-general;
+	font-size:$u-font-size-general;
 	line-height:$lineHeight;
 	width:100%;
 	height:50px;
 	border:none;
 	margin:0;
 	padding:13px 14px;
-	@extend %-u-boxsizing;
-	@extend %-u-border-radius-clear-all;
-	border-bottom:$-u-border-mediumgrey;
+	@extend %u-boxsizing;
+	@extend %u-border-radius-clear-all;
+	border-bottom:$u-border-mediumgrey;
 	&.error {
 		color:$u-color-red;
-		border-bottom:$-u-border-red;
+		border-bottom:$u-border-red;
 	}
 }
 
@@ -211,13 +211,13 @@ input:focus {
 	select {
 		background:transparent;
 		color:$u-color-black;
-		font-size:$-u-font-size-general;
+		font-size:$u-font-size-general;
 		line-height:$lineHeight;
 		height:50px;
 		border:none;
 		margin:0;
 		padding:13px 40px 13px 14px;
-		@extend %-u-boxsizing;
+		@extend %u-boxsizing;
 	}
 	.transformSelect {
 		position:relative;
@@ -225,8 +225,8 @@ input:focus {
 			height:50px;
 			list-style:none;
 			position:relative;
-			@extend %-u-boxsizing;
-			border-bottom:$-u-border-mediumgrey;
+			@extend %u-boxsizing;
+			border-bottom:$u-border-mediumgrey;
 			span, input[type=text] {
 				line-height:$lineHeight;
 				display:block;
@@ -253,9 +253,9 @@ input:focus {
 				margin-top:-1px;
 				left:-1px;
 				width:100%;
-				border-right:$-u-border-black;
-				border-bottom:$-u-border-black;
-				border-left:$-u-border-black;
+				border-right:$u-border-black;
+				border-bottom:$u-border-black;
+				border-left:$u-border-black;
 				li {
 					border:none;
 					span {
@@ -279,7 +279,7 @@ input:focus {
 					}
 				}
 				ul {
-					border-top:$-u-border-black;
+					border-top:$u-border-black;
 					li {
 						span {
 							border:none;
@@ -306,7 +306,7 @@ input:focus {
 	&.error {
 		.transformSelect {
 			li {
-				border-bottom:$-u-border-red;
+				border-bottom:$u-border-red;
 				span {
 					color:$u-color-red;
 					&:after {
@@ -330,14 +330,14 @@ input:focus {
 /*------------------------- 按鈕 -------------------------*/
 
 button {
-	font-size:$-u-font-size-general;
+	font-size:$u-font-size-general;
 	font-weight:bold;
 	line-height:$lineHeight;
 	margin:0;
 	border:none;
 	cursor:pointer;
-	@extend %-u-boxsizing;
-	@extend %-u-border-radius-s;
+	@extend %u-boxsizing;
+	@extend %u-border-radius-s;
 }
 
 button:focus {
@@ -482,7 +482,7 @@ button:focus {
 
 /*-- 小標帶內文 --*/
 .c-item  {
-	@extend %-u-boxsizing;
+	@extend %u-boxsizing;
 	display:block;
 	float:left;
 	&__title {
@@ -491,6 +491,108 @@ button:focus {
 	&__detail {
 		width:calc(100% - 70px);
 		padding-left:10px;
+	}
+}
+
+/*-- 進度條 --*/
+.c-progress {
+	ul {
+		position:relative;
+		padding-right:14px;
+		padding-left:14px;
+		li {
+			position:relative;
+			padding-left:21px;
+			padding-bottom:10px;
+			font-size:$u-font-size-xs;
+			color:$u-color-grey;
+			&:after {
+				content:" ";
+				position:absolute;
+				display:block;
+				width:11px;
+				height:11px;
+				top:6px;
+				left:0;
+				-webkit-border-radius:6px;
+				-moz-border-radius:6px;
+				-o-border-radius:6px;
+				border-radius:6px;
+			}
+			&:before {
+				content:" ";
+				position:absolute;
+				display:block;
+				width:1px;
+				left:5px;
+				background:$u-color-mediumGrey;
+			}
+		}
+	}
+	&__new {
+		padding-top:10px;
+		li {
+			&:after {
+				background:$u-color-orange;
+			}
+			&:before {
+				height:calc(100% - 6px);
+				top:6px;
+			}
+		}
+		&--status {
+			font-weight:bold;
+			font-size:$u-font-size-general;
+			color:$u-color-orange;
+		}
+	}
+	&__list {
+		li {
+			&:after {
+				background:$u-color-mediumGrey;
+			}
+			&:before {
+				height:100%;
+			}
+		}
+		&--status {
+			font-weight:bold;
+			font-size:$u-font-size-general;
+			color:$u-color-black;
+		}
+	}
+	&__button {
+		width:100%;
+		font-size:$u-font-size-general;
+		text-align:center;
+		padding:13px;
+		cursor:pointer;
+		border-top:$u-border-mediumgrey;
+		span {
+			display:inline-block;
+			position:relative;
+			padding-right:24px;
+			&:after {
+				content:" ";
+				display:block;
+				position:absolute;;
+				width:16px;
+				height:16px;
+				background-image: url(../images/icon/arrow/black/down.png);
+				background-position: right center;
+				  background-repeat: no-repeat;
+				background-size: 16px;
+				top:4px;
+				right:0;
+			}
+		}
+		&.active {
+			span {
+				&:after {
+					background-image: url(../images/icon/arrow/black/up.png);
+				}
+			}
+		}
 	}
 }
 
@@ -512,7 +614,7 @@ button:focus {
 	// 金額欄位
 	.c-order__sum {
 		padding-bottom:10px;
-		border-bottom:$-u-border-mediumgrey;
+		border-bottom:$u-border-mediumgrey;
 	}
 	// docking 時候的 button
 	.c-button {
@@ -534,7 +636,7 @@ button:focus {
 		background-color:$u-color-lightPink;
 		position:absolute;
 		color:$u-color-red;
-		font-size:$-u-font-size-xs;
+		font-size:$u-font-size-xs;
 		display:block;
 		padding:0 5px;
 		left:14px;
@@ -543,12 +645,12 @@ button:focus {
 	&--MSG {
 		background-color:$u-color-lightPink;
 		color:$u-color-red;
-		font-size:$-u-font-size-xs;
+		font-size:$u-font-size-xs;
 		display:block;
 		width:100%;
 		padding:5px 14px;
 		margin-top:5px;
-		@extend %-u-border-radius-xs;
+		@extend %u-border-radius-xs;
 	}
 }
 
